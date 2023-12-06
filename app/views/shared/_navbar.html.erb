@@ -1,10 +1,10 @@
-<div class="navbar">
-  <%= link_to root_path do %>
+<div class="navbar"> <!-- implement navbar -->
+  <%= link_to root_path do %> <!-- links to home -->
     <%= image_tag "profiler_logo.png" %> <!-- implement logo, that is clickable -->
   <% end %>
-  <div class="bar">
-    <%= link_to "Resumes", root_path, class: "nav-item" %> <!-- links to Home -->
-    <%= link_to "Cover Letters", cover_letters_path, class: "nav-item" %>
-    <%= link_to "Applications", root_path, class: "nav-item" %>
+  <div class="bar"> <!-- implement bar within bar -->
+    <%= link_to "Resume", root_path, class: "nav-item" %> <!-- links to Resume-Page -->
+    <%= link_to "Cover Letter", cover_letters_path, class: "nav-item" %> <!-- links to Cover-Letter-Page -->
+    <%= link_to "Applications", root_path, class: "nav-item" %> <!-- links to Applications-Page -->
   </div>
 </div>
