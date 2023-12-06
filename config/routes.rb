@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  get '/cloud', to: 'pages#cloud', as: :cloud
+
+  resources :cover_letters, only: %i[index]
 end
