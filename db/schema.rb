@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_10_185156) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_10_231942) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -44,6 +44,28 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_10_185156) do
     t.index ["user_id"], name: "index_cover_letters_on_user_id"
   end
 
+  create_table "resume_entries", force: :cascade do |t|
+    t.bigint "resume_id", null: false
+    t.string "title"
+    t.string "subtitle"
+    t.string "location"
+    t.date "start"
+    t.date "end"
+    t.boolean "is_active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["resume_id"], name: "index_resume_entries_on_resume_id"
+  end
+
+  create_table "resumes", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.boolean "is_saved"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_resumes_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -63,4 +85,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_10_185156) do
   add_foreign_key "applications", "users"
   add_foreign_key "cover_letter_entries", "cover_letters"
   add_foreign_key "cover_letters", "users"
+  add_foreign_key "resume_entries", "resumes"
+  add_foreign_key "resumes", "users"
 end

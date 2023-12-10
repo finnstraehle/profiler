@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :cover_letters, dependent: :destroy
   has_many :applications, dependent: :destroy
+  has_many :resumes, dependent: :destroy
 end

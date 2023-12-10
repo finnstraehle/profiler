@@ -1,0 +1,34 @@
+<div class="container-l">
+  <div class="header-page">
+    <h1>My Resume</h1>
+    <div class="d-flex">
+      <div class="icon-btn">
+        <%= link_to "<i class='fa-solid fa-download'></i>".html_safe, resumes_path %>
+      </div>
+      <div class="icon-btn">
+        <%= link_to "<i class='fa-solid fa-floppy-disk'></i>".html_safe, resumes_path %>
+      </div>
+      <div class="icon-btn">
+        <%= link_to "<i class='fa-regular fa-bookmark'></i>".html_safe, resumes_path %>
+      </div>
+    </div>
+  </div>
+  <div class="container-m">
+    <div class="sheet-cover-letter">
+      <div class="doc-header">
+        <h2><%= @user.full_name %></h2>
+        <p><%= @user.address %> | <%= @user.email %> | <%= @user.phone %></p>
+        <br>
+      </div>
+      <div class="cv-entries">
+        <%# add shit %>
+      </div>
+    </div>
+  </div>
+  <div class="sheet-edit-cover-letter">
+
+    <div class="cl-edit-entry">
+
+    </div>
+  </div>
+</div>

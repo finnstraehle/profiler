@@ -43,6 +43,12 @@ puts "Creating users..."
     )
     application.save! # saving the application
   end
+  resume = Resume.new( # creating a resume
+    is_saved: false, # setting is_saved to false
+    name: Faker::Company.name, # generating a random name
+    user: user # assigning the user to the resume
+  )
+  resume.save! # saving the resume
 end
 
 puts 'done!' # printing done when finished, to know when the seed is succesfully executed
