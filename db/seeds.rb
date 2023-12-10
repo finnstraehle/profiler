@@ -2,9 +2,9 @@ require 'faker' # installing faker gem, to fake user data
 
 # Cleaning the entire database
 puts "Cleaning database..."
-User.destroy_all # deleting all users
-CoverLetter.destroy_all # deleting all cover letters
 CoverLetterEntry.destroy_all # deleting all cover letter entries
+CoverLetter.destroy_all # deleting all cover letters
+User.destroy_all # deleting all users
 
 puts "Creating users..."
 5.times do |i| # creating 5 users
@@ -33,6 +33,16 @@ puts "Creating users..."
       )
       cover_letter_entry.save! # saving the cover letter entry
     end
+  end
+  rand(3..7).times do # creating 3 to 7 applications for each user
+    application = Application.new( # creating an application
+      company: Faker::Company.name,
+      status: ['pending', 'accepted', 'rejected'].sample, # generating a random status
+      link: Faker::Internet.url, # generating a random url
+      date: Faker::Date.between(from: 20.days.ago, to: Date.today), # generating a random date
+      user: user # assigning the user to the application
+    )
+    application.save! # saving the application
   end
 end
 

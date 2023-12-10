@@ -1,0 +1,17 @@
+<div class="container-l">
+  <div class="header-applications">
+    <h1>My Applications</h1>
+    <div class="btn-add-application">
+      <i href="#" class="fa-solid fa-plus"></i>
+    </div>
+  </div>
+  <% @applications.each do |application| %>
+    <div class="card-application">
+      <div class="card-application-content">
+        <h4><%= application.company %></h4>
+        <p><%= application.status %> – <%= @date.mjd - application.date.mjd %> <%= @date.mjd - application.date.mjd == 1 ? "day" : "days" %></p>
+      </div>
+      <a href="#"><i class="far fa-trash-alt"></i></a>
+    </div>
+  <% end %>
+</div>
