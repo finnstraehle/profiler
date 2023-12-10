@@ -1,10 +1,8 @@
 <div class="container-l">
   <div class="header-page">
-    <h1>My Cover Letter</h1>
-    <div class="icon-btn">
-      <i href="#" class="fa-regular fa-bookmark"></i>
-    </div>
+    <h1>Saved Cover Letters</h1>
   </div>
+  <%= link_to "<i class='fa-solid fa-arrow-left'></i>".html_safe + " " + "Back", coverletter_path %>
   <% @cover_letters.each do |cover_letter| %>
     <h3><%= cover_letter.company %></h3>
   <% end %>
