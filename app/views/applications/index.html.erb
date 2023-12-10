@@ -5,7 +5,11 @@
       <%= link_to "<i class='fa-solid fa-plus'></i>".html_safe, new_application_path %>
     </div>
   </div>
-  <% @applications.each do |application| %>
+  <div style="text-align: right">
+    <% sort = ['Company', 'Status', 'Date'] %>
+    <p>Sort – <%= sort[1] %></p>
+  </div>
+  <% @applications.sort_by{|e| e.status}.each do |application| %>
     <%= render "applications/card_application", application: application %>
   <% end %>
 </div>

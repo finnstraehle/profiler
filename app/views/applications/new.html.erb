@@ -1,11 +1,18 @@
 <div class="container-l">
-  <h1>New Application</h1>
+  <div class="header-page">
+    <h1>New Application</h1>
+  </div>
+  <%= link_to "<i class='fa-solid fa-arrow-left'></i>".html_safe + " " + "Back", applications_path %>
   <div class="sheet-application">
     <%= simple_form_for(@application) do |f| %>
       <%= f.input :company %>
       <%= f.input :link %>
-      <%= f.input :status, collection: ["Applied", "Interview", "Offer", "Rejected"] %>
-      <%= f.input :notes %>
-      <%= f.button :submit %>
+      <%= f.input :status, collection: Application::STATUS %>
+      <%= f.input :notes, :input_html => { :rows => 6 } %>
+      <%= f.hidden_field :date, value: @date %>
+      <div class="d-flex" style="margin-top: 50px">
+        <%= f.button :submit, class:"button", style:"margin: 0 auto" %>
+      </div>
+    <% end %>
   </div>
 </div>

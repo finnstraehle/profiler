@@ -5,7 +5,7 @@
       <h4><%= application.company %></h4>
       <div class="d-flex">
         <p style="color: <%= status_color %>;"><%= application.status %></p>
-        <p> – <%= @date.mjd - application.date.mjd %> <%= @date.mjd - application.date.mjd == 1 ? "day" : "days" %></p>
+        <p>&nbsp– <%= @date.mjd - application.date.mjd != 0 ? @date.mjd - application.date.mjd : "" %> <%= @date.mjd - application.date.mjd == 1 ? "day" : @date.mjd - application.date.mjd == 0 ? "today" : "days" %></p>
       </div>
     </div>
     <div class="card-application-buttons">

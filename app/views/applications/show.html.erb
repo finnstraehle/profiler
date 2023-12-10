@@ -5,6 +5,7 @@
       <%= link_to "<i class='fa-solid fa-edit'></i>".html_safe, edit_application_path(@application) %>
     </div>
   </div>
+  <%= link_to "<i class='fa-solid fa-arrow-left'></i>".html_safe + " " + "Back", applications_path %>
   <div class="sheet-application">
     <div class="sheet-application-header">
       <div>
@@ -13,7 +14,7 @@
       </div>
       <div>
         <h4 style="color: <%= @status_color %>"><%= @application.status %></h4>
-        <p>since <%= @date.mjd - @application.date.mjd %> <%= @date.mjd - @application.date.mjd == 1 ? "day" : "days" %></p>
+        <p>since <%= @date.mjd - @application.date.mjd != 0 ? @date.mjd - @application.date.mjd : "" %> <%= @date.mjd - @application.date.mjd == 1 ? "day" : @date.mjd - @application.date.mjd == 0 ? "today" : "days" %></p>
       </div>
     </div>
     <h4>Notes:</h4>
