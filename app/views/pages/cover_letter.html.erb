@@ -1,0 +1,44 @@
+<div class="container-l">
+  <div class="header-page">
+    <h1>My Cover Letter</h1>
+    <div class="d-flex">
+      <div class="icon-btn">
+        <%= link_to "<i class='fa-solid fa-download'></i>".html_safe, cover_letters_path %>
+      </div>
+      <div class="icon-btn">
+        <%= link_to "<i class='fa-solid fa-floppy-disk'></i>".html_safe, cover_letters_path %>
+      </div>
+      <div class="icon-btn">
+        <%= link_to "<i class='fa-regular fa-bookmark'></i>".html_safe, cover_letters_path %>
+      </div>
+    </div>
+  </div>
+  <div class="container-m">
+    <div class="sheet-cover-letter">
+      <div class="cl-header">
+        <h2><%= @user.full_name %></h2>
+        <p><%= @user.address %> | <%= @user.email %> | <%= @user.phone %></p>
+        <br>
+      </div>
+      <div class="cl-entries">
+        <% @cover_letter.cover_letter_entries.each do |entry| %>
+          <p><%= entry.text %></p>
+          <p></p>
+        <% end %>
+      </div>
+      <br>
+      <p>Sincerly,</p>
+      <p><%= @user.full_name %></p>
+    </div>
+  </div>
+  <div class="sheet-edit-cover-letter">
+    <div class="cl-edit-entries">
+      <% @cover_letter.cover_letter_entries.each do |entry| %>
+        <%= render "pages/card_cl_entry", entry: entry %>
+      <% end %>
+    </div>
+    <div class="cl-edit-entry">
+
+    </div>
+  </div>
+</div>
