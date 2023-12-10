@@ -28,9 +28,8 @@
     font-weight: 500;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
-    &:hover {
-      color: $red;
-      text-decoration: none;
+    &:hover { // turns indigo, when the user hovers over the nav item
+      color: $indigo;
     }
 }
 

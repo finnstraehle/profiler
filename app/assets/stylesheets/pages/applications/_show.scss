@@ -1,0 +1,15 @@
+.sheet-application {
+  background: white;
+  width: 90%;
+  margin: 40px auto 0 auto;
+  padding: 140px;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.sheet-application .sheet-application-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}

@@ -4,3 +4,31 @@
 // Define fonts for body and headers
 $body-font: "Work Sans", "Helvetica", "sans-serif";
 $headers-font: "Nunito", "Helvetica", "sans-serif";
+
+// Define links style
+a {
+  text-decoration: none !important;
+  color: #3a3a3a !important;
+  p {
+    color: #3a3a3a;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: #3a3a3a;
+  }
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: #3a3a3a;
+  p {
+    color: #3a3a3a;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: #3a3a3a;
+  }
+}
+
+// Define icon style
+i {
+  color: #3a3a3a;
+}
