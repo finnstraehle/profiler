@@ -2,16 +2,10 @@
   <div class="header-page">
     <h1>My Applications</h1>
     <div class="icon-btn">
-      <i href="#" class="fa-solid fa-plus"></i>
+      <%= link_to "<i class='fa-solid fa-plus'></i>".html_safe, new_application_path %>
     </div>
   </div>
   <% @applications.each do |application| %>
-    <div class="card-application">
-      <div class="card-application-content">
-        <h4><%= application.company %></h4>
-        <p><%= application.status %> – <%= @date.mjd - application.date.mjd %> <%= @date.mjd - application.date.mjd == 1 ? "day" : "days" %></p>
-      </div>
-      <a href="#"><i class="far fa-trash-alt"></i></a>
-    </div>
+    <%= render "applications/card_application", application: application %>
   <% end %>
 </div>

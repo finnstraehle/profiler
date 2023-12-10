@@ -1,0 +1,11 @@
+<div class="container-l">
+  <h1>New Application</h1>
+  <div class="sheet-application">
+    <%= simple_form_for(@application) do |f| %>
+      <%= f.input :company %>
+      <%= f.input :link %>
+      <%= f.input :status, collection: ["Applied", "Interview", "Offer", "Rejected"] %>
+      <%= f.input :notes %>
+      <%= f.button :submit %>
+  </div>
+</div>

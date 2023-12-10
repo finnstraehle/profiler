@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   resources :resumes, only: %i[index]
   resources :cover_letters, only: %i[index]
-  resources :applications, only: %i[index]
+  resources :applications, only: %i[index show new create edit update destroy]
 end

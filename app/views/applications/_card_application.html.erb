@@ -1,0 +1,15 @@
+<%= link_to application_path(application) do %>
+  <% status_color = application.status == 'Accepted' ? 'green' : application.status == 'Rejected' ? 'red' : 'orange' %>
+  <div class="card-application">
+    <div class="card-application-content">
+      <h4><%= application.company %></h4>
+      <div class="d-flex">
+        <p style="color: <%= status_color %>;"><%= application.status %></p>
+        <p> – <%= @date.mjd - application.date.mjd %> <%= @date.mjd - application.date.mjd == 1 ? "day" : "days" %></p>
+      </div>
+    </div>
+    <div class="card-application-buttons">
+      <%= link_to "<i class='fa-regular fa-trash-alt'></i>".html_safe, application_path(application), data: { turbo_method: :delete, turbo_confirm: "Are you sure that you want to delete this application?"} %>
+    </div>
+  </div>
+<% end %>

@@ -37,8 +37,9 @@ puts "Creating users..."
   rand(3..7).times do # creating 3 to 7 applications for each user
     application = Application.new( # creating an application
       company: Faker::Company.name,
-      status: ['pending', 'accepted', 'rejected'].sample, # generating a random status
+      status: Application::STATUS.sample, # generating a random status
       link: Faker::Internet.url, # generating a random url
+      notes: Faker::Quote.matz + " " + Faker::Quote.matz + " " + Faker::Quote.matz, # generating a random quote
       date: Faker::Date.between(from: 20.days.ago, to: Date.today), # generating a random date
       user: user # assigning the user to the application
     )
