@@ -14,7 +14,7 @@
     </div>
   </div>
   <div class="container-m">
-    <div class="sheet-cover-letter">
+    <div class="sheet-doc">
       <div class="doc-header">
         <h2><%= @user.full_name %></h2>
         <p><%= @user.address %> | <%= @user.email %> | <%= @user.phone %></p>
@@ -31,7 +31,7 @@
       <p><%= @user.full_name %></p>
     </div>
   </div>
-  <div class="sheet-edit-cover-letter">
+  <div class="sheet-edit">
     <div class="cl-edit-entries">
       <% @cover_letter.cover_letter_entries.each do |entry| %>
         <%= render "pages/card_cl_entry", entry: entry %>
