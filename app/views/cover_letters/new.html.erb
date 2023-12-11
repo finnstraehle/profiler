@@ -1,0 +1,16 @@
+<div class="container-l">
+  <div class="header-page">
+    <h1>Save Current Cover Letter</h1>
+  </div>
+  <%= link_to "<i class='fa-solid fa-arrow-left'></i>".html_safe + " " + "Back", coverletter_path %>
+  <div class="sheet-application">
+    <%= simple_form_for(@cover_letter) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :company %>
+      <%= f.hidden_field :is_saved, value: true %>
+      <div class="d-flex" style="margin-top: 50px">
+        <%= f.button :submit, class:"button", style:"margin: 0 auto" %>
+      </div>
+    <% end %>
+  </div>
+</div>

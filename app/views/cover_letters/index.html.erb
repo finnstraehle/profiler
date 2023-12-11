@@ -4,6 +4,6 @@
   </div>
   <%= link_to "<i class='fa-solid fa-arrow-left'></i>".html_safe + " " + "Back", coverletter_path %>
   <% @cover_letters.each do |cover_letter| %>
-    <h3><%= cover_letter.company %></h3>
+    <%= render "cover_letters/card_cover_letter", cover_letter: cover_letter %>
   <% end %>
 </div>

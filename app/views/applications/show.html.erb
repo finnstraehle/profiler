@@ -2,7 +2,7 @@
   <div class="header-page">
     <h1>Application – <%= @application.company %></h1>
     <div class="icon-btn">
-      <%= link_to "<i class='fa-solid fa-edit'></i>".html_safe, edit_application_path(@application) %>
+      <%= link_to "<i class='fa-solid fa-pen'></i>".html_safe, edit_application_path(@application) %>
     </div>
   </div>
   <%= link_to "<i class='fa-solid fa-arrow-left'></i>".html_safe + " " + "Back", applications_path %>

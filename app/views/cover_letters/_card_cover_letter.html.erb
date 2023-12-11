@@ -1,0 +1,12 @@
+<div class="card-saved">
+  <div class="card-saved-content">
+    <h4><%= cover_letter.name %></h4>
+    <div class="d-flex">
+      <p><%= cover_letter.company %></p>
+      <p>&nbsp– <%= cover_letter.created_at %></p>
+    </div>
+  </div>
+  <div class="card-saved-buttons">
+    <%= link_to "<i class='fa-regular fa-trash-alt'></i>".html_safe, cover_letter_path(cover_letter), data: { turbo_method: :delete, turbo_confirm: "Are you sure that you want to delete this Cover Letter?"} %>
+  </div>
+</div>
