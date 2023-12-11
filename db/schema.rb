@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_10_231942) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_11_155912) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -54,6 +54,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_10_231942) do
     t.boolean "is_active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "section"
     t.index ["resume_id"], name: "index_resume_entries_on_resume_id"
   end
 
@@ -63,6 +64,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_10_231942) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "section_one"
+    t.string "section_two"
+    t.string "section_three"
     t.index ["user_id"], name: "index_resumes_on_user_id"
   end
 

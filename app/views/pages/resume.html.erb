@@ -17,14 +17,28 @@
     <div class="sheet-doc">
       <div class="doc-header">
         <h2><%= @user.full_name %></h2>
-        <p><%= @user.address %> | <%= @user.email %> | <%= @user.phone %></p>
+        <p><%= @user.address %> | <%= @user.email %> | <%= @user.phone %></p>
         <br>
       </div>
-      <h4>Education</h4>
+      <h4><%= @resume.section_one %></h4>
       <hr>
       <div class="cv-entries">
-        <% @resume.resume_entries.each do |entry| %>
-        <%= render "pages/cv_entry", entry: entry %>
+        <% @resume.resume_entries.select { |e| e.section == 1}.each do |entry| %>
+          <%= render "pages/cv_entry", entry: entry %>
+        <% end %>
+      </div>
+      <h4><%= @resume.section_two %></h4>
+      <hr>
+      <div class="cv-entries">
+        <% @resume.resume_entries.select { |e| e.section == 2}.each do |entry| %>
+          <%= render "pages/cv_entry", entry: entry %>
+        <% end %>
+      </div>
+      <h4><%= @resume.section_three %></h4>
+      <hr>
+      <div class="cv-entries">
+        <% @resume.resume_entries.select { |e| e.section == 3}.each do |entry| %>
+          <%= render "pages/cv_entry", entry: entry %>
         <% end %>
       </div>
     </div>

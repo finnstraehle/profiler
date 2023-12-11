@@ -20,6 +20,8 @@
         <p><%= @user.address %> | <%= @user.email %> | <%= @user.phone %></p>
         <br>
       </div>
+      <p>Dear Hiring Manager,</p>
+      <br>
       <div class="cl-entries">
         <% @cover_letter.cover_letter_entries.each do |entry| %>
           <p><%= entry.text %></p>
