@@ -17,3 +17,18 @@
     color: #fff;
   }
 }
+
+
+.btn-outline {
+  width: 100%;
+  border: 3px solid $indigo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $indigo;
+  font-size: 18px;
+  padding: 10px 30px;
+  &:hover {
+    border: 3px solid black;
+  }
+}

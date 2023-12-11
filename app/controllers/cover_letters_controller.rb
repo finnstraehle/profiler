@@ -1,11 +1,13 @@
 class CoverLettersController < ApplicationController
 
   def index
-    @cover_letters = current_user.cover_letters # get all cover letters for the current user
+    @cover_letters = current_user.cover_letters.select { |e| e.is_saved == true } # get all cover letters for the current user
   end
 
   def new
+    @current_cover_letter = current_user.cover_letters.find { |e| e.is_saved == false } # get the cover letter that is not saved
     @cover_letter = CoverLetter.new
+
   end
 
   def create

@@ -6,7 +6,7 @@ class PagesController < ApplicationController
 
   def cover_letter
     @user = current_user # get the current user
-    @cover_letter = CoverLetter.find { |e| e.is_saved == false } # get the cover letter that is not saved
+    @cover_letter = current_user.cover_letters.find { |e| e.is_saved == false } # get the cover letter that is not saved
   end
 
   def resume
