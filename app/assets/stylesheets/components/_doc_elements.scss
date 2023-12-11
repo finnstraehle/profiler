@@ -1,0 +1,26 @@
+.sheet-doc {
+  background: white;
+  width: 900px;
+  height: 1278px; // to get the exact ratio of an A4 sheet
+  margin: 40px auto 700px auto;
+  padding: 70px 100px;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.doc-header {
+  text-align: center;
+}
+
+.sheet-edit {
+  position: fixed;
+  bottom: 50px;
+  background: white;
+  width: 90vw;
+  max-width: 1200px;
+  height: 20vh;
+  border-radius: 10px;
+  border: 5px solid $indigo-dark;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  padding: 30px;
+}

@@ -25,7 +25,7 @@ puts "Creating users..."
     user: user # assigning the user to the cover letter
   )
   cover_letter.save! # saving the cover letter
-  rand(4..6).times do # creating 1 to 3 cover letter entries for each cover letter
+  rand(4..6).times do # creating 4 to 6 cover letter entries for each cover letter
     cover_letter_entry = CoverLetterEntry.new( # creating a cover letter entry
       text: Faker::Quote.matz + " " + Faker::Quote.matz, # generating a random text
       cover_letter: cover_letter # assigning the cover letter to the cover letter entry
@@ -42,6 +42,28 @@ puts "Creating users..."
       user: user # assigning the user to the application
     )
     application.save! # saving the application
+  end
+  resume = Resume.new( # creating a resume
+    is_saved: false, # setting is_saved to false
+    name: Faker::Company.name, # generating a random name
+    section_one: "Education", # setting section one to Education
+    section_two: "Work Experience", # setting section two to Experience
+    section_three: "Skills & Interests", # setting section three to Skills
+    user: user # assigning the user to the resume
+  )
+  resume.save! # saving the resume
+  rand(5..8).times do # creating 1 to 3 resume entries for each resume
+    resume_entry = ResumeEntry.new( # creating a resume entry
+      title: Faker::Company.name, # generating a random title
+      subtitle: Faker::Job.title, # generating a random subtitle
+      location: Faker::Address.city, # generating a random location
+      start: Faker::Date.between(from: 20.days.ago, to: Date.today), # generating a random start date
+      end: Faker::Date.between(from: 20.days.ago, to: Date.today), # generating a random end date
+      section: rand(1..3), # generating a random section
+      is_active: true, # setting is_active to true
+      resume: resume # assigning the resume to the resume entry
+    )
+    resume_entry.save! # saving the resume entry
   end
 end
 
