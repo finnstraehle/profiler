@@ -3,7 +3,7 @@
     <h4><%= cover_letter.name %></h4>
     <div class="d-flex">
       <p><%= cover_letter.company %></p>
-      <p>&nbsp– <%= cover_letter.created_at %></p>
+      <p>&nbsp– <%= cover_letter.created_at.strftime('%d/%m/%Y') %></p>
     </div>
   </div>
   <div class="card-saved-buttons">

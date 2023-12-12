@@ -15,13 +15,12 @@ class ApplicationsController < ApplicationController
 
   def new
     @application = Application.new
-    @user = current_user
-    @date = Date.today
   end
 
   def create
     @application = Application.new(application_params)
     @application.user = current_user
+    @application.date = Date.today
     if @application.save
       redirect_to applications_path
     else

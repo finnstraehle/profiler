@@ -1,0 +1,19 @@
+
+<div style="padding: 30px 50px">
+  <div style="text-align: center">
+    <h2 style="font-size: 30px"><%= @user.full_name %></h2>
+    <p style="font-size: 20px"><%= @user.address %> | <%= @user.email %> | <%= @user.phone %></p>
+    <br>
+  </div>
+  <p style="font-size: 20px">Dear Hiring Manager,</p>
+  <br>
+  <div>
+    <% @cover_letter.cover_letter_entries.each do |entry| %>
+      <p style="font-size: 20px; text-align: justify"><%= entry.text %></p>
+      <p></p>
+    <% end %>
+  </div>
+  <br>
+  <p style="font-size: 20px">Sincerly,</p>
+  <p style="font-size: 20px"><%= @user.full_name %></p>
+</div>
