@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: [ :home, :about ]
 
   def home
   end
@@ -12,5 +12,8 @@ class PagesController < ApplicationController
   def resume
     @user = current_user # get the current user
     @resume = Resume.find { |e| e.is_saved == false } # get the resume that is not saved
+  end
+
+  def about
   end
 end
