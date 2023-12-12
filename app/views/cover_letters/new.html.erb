@@ -2,7 +2,7 @@
   <div class="header-page">
     <h1>Save Current Cover Letter</h1>
   </div>
-  <%= link_to "<i class='fa-solid fa-arrow-left'></i>".html_safe + " " + "Back", coverletter_path %>
+  <%= render "shared/back_button" %>
   <div class="sheet-application">
     <%= simple_form_for(@cover_letter) do |f| %>
       <%= f.input :name %>

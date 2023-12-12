@@ -46,6 +46,11 @@
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   padding: 30px;
   background-color: white;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
 }
 
 .card-home img {
