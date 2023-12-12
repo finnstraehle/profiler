@@ -2,8 +2,8 @@
   <div class="card-saved-content">
     <h4><%= resume.name %></h4>
     <div class="d-flex">
-      <p><%= resume.name %></p>
-      <p>&nbsp– <%= resume.created_at %></p>
+      <p><%= resume.company %></p>
+      <p>&nbsp– <%= resume.created_at.strftime('%d/%m/%Y') %></p>
     </div>
   </div>
   <div class="card-saved-buttons">

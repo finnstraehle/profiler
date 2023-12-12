@@ -9,9 +9,9 @@ class PagesController < ApplicationController
     @cover_letter = current_user.cover_letters.find { |e| e.is_saved == false } # get the cover letter that is not saved
   end
 
-  def resume
+  def cv
     @user = current_user # get the current user
-    @resume = Resume.find { |e| e.is_saved == false } # get the resume that is not saved
+    @resume = current_user.resumes.find { |e| e.is_saved == false } # get the cover letter that is not saved
   end
 
   def about

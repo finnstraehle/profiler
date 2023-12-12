@@ -45,7 +45,8 @@ puts "Creating users..."
   end
   resume = Resume.new( # creating a resume
     is_saved: false, # setting is_saved to false
-    name: Faker::Company.name, # generating a random name
+    name: Faker::Job.title, # generating a random name for the resume
+    company: Faker::Company.name, # generating a random company
     section_one: "Education", # setting section one to Education
     section_two: "Work Experience", # setting section two to Experience
     section_three: "Skills & Interests", # setting section three to Skills

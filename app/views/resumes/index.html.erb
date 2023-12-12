@@ -2,7 +2,8 @@
   <div class="header-page">
     <h1>Saved Resumes</h1>
   </div>
-  <%= link_to "<i class='fa-solid fa-arrow-left'></i>".html_safe + " " + "Back", resume_path %>
+  <%= link_to "<i class='fa-solid fa-arrow-left'></i>".html_safe + " " + "Back", cv_path %>
+  <div class="spacer"></div>
   <% @resumes.each do |resume| %>
     <%= render "resumes/card_resume", resume: resume %>
   <% end %>

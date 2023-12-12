@@ -1,17 +1,15 @@
 class CoverLettersController < ApplicationController
 
   def index
-    # @cover_letters = current_user.cover_letters.select { |e| e.is_saved == true }
-    @cover_letters = current_user.cover_letters
+    @cover_letters = current_user.cover_letters.select { |e| e.is_saved == true }
   end
 
   def new
-    @current_cover_letter = current_user.cover_letters.find { |e| e.is_saved == false } # get the cover letter that is not saved
     @cover_letter = CoverLetter.new
-
   end
 
   def create
+    @current_cover_letter = current_user.cover_letters.find { |e| e.is_saved == false } # get the cover letter that is not saved
     @cover_letter = CoverLetter.new(cover_letter_params)
     @cover_letter.user = current_user
     @cover_letter.is_saved = true
@@ -30,10 +28,6 @@ class CoverLettersController < ApplicationController
         render pdf: "my_cover_letter", template: "cover_letters/cl_pdf", formats: :html, page_sitze: 'a4'
       end
     end
-  end
-
-  def edit
-    @cover_letter = CoverLetter.find(params[:id])
   end
 
   def update
