@@ -3,17 +3,17 @@
     <h1>My Resume</h1>
     <div class="d-flex">
       <div class="icon-btn">
-        <%= link_to "<i class='fa-solid fa-download'></i>".html_safe, resumes_path %>
+        <%= link_to "<i class='fa-solid fa-download'></i>".html_safe, resume_path(@resume, format: :pdf)  %>
       </div>
       <div class="icon-btn">
-        <%= link_to "<i class='fa-solid fa-floppy-disk'></i>".html_safe, resumes_path %>
+        <%= link_to "<i class='fa-solid fa-floppy-disk'></i>".html_safe, new_resume_path %>
       </div>
       <div class="icon-btn">
         <%= link_to "<i class='fa-regular fa-bookmark'></i>".html_safe, resumes_path %>
       </div>
     </div>
   </div>
-  <div class="container-m">
+  <div class="container-sheet">
     <div class="sheet-doc">
       <div class="doc-header">
         <h2><%= @user.full_name %></h2>
@@ -44,6 +44,9 @@
     </div>
   </div>
   <div class="sheet-edit">
+    <div class="sheet-edit-title">
+      <i class='fa-solid fa-pen'></i>
+    </div>
 
     <div class="cl-edit-entry">
 

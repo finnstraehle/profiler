@@ -1,7 +1,49 @@
-<h1>Home</h1>
+<div class="home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_url("background.jpg") %>)">
+  <h1>Profiler – Profile Perfection</h1>
+  <%= link_to "START", cv_path, class: "btn-start" %>
+</div>
 
-<% User.all.each do |i| %>
-  <%= i.cover_letters.each do |c| %>
-    <%= c.company %>
-  <% end %>
-<% end %>
+
+<div class="container-l">
+  <div class="container-m text-center">
+    <h2>Elevate Your Professional Game with Profiler</h2>
+    <p>Welcome to Profiler, your ultimate digital toolkit for career advancement. Here, we understand the importance of a well-crafted professional identity. Profiler is designed to streamline and enhance your job application process. With our intuitive platform, you can effortlessly create, manage, and customize your CVs, Cover Letters, and job applications. Join us and take the first step towards a brighter professional future.</p>
+  </div>
+  <div class="blue-line"></div>
+</div>
+<div class="banner-grey">
+  <div class="container-l">
+    <div class="home-grid">
+      <div class="card-home">
+        <%= image_tag "resume.png" %>
+        <div class="card-home-content">
+          <h2>Resume</h2>
+          <p>Build a standout resume that encapsulates your skills and experiences, making every career story shine.</p>
+        </div>
+      </div>
+      <div class="card-home">
+        <%= image_tag "cover_letter.png" %>
+        <div class="card-home-content">
+          <h2>Cover Letter</h2>
+          <p>Create compelling cover letters that resonate with employers, personalizing your professional pitch.</p>
+        </div>
+      </div>
+      <div class="card-home">
+        <%= image_tag "application.png" %>
+        <div class="card-home-content">
+          <h2>Applications</h2>
+          <p>Streamline your job applications, tracking and managing them with ease for a smoother job hunt.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-l mb-4">
+  <div class="text-center m-4"><h2>Get Started</h2></div>
+  <div class="grid-buttons">
+    <%= link_to "Resume", cv_path, class: "btn-outline" %>
+    <%= link_to "Cover Letter", coverletter_path, class: "btn-outline" %>
+    <%= link_to "Applications", applications_path, class: "btn-outline" %>
+    <%= link_to "About Us", about_path, class: "btn-outline" %>
+  </div>
+</div>

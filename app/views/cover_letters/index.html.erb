@@ -2,8 +2,9 @@
   <div class="header-page">
     <h1>Saved Cover Letters</h1>
   </div>
-  <%= link_to "<i class='fa-solid fa-arrow-left'></i>".html_safe + " " + "Back", coverletter_path %>
+  <%= render "shared/back_button" %>
+  <div class="spacer"></div>
   <% @cover_letters.each do |cover_letter| %>
-    <h3><%= cover_letter.company %></h3>
+    <%= render "cover_letters/card_cover_letter", cover_letter: cover_letter %>
   <% end %>
 </div>

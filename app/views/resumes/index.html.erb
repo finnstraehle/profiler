@@ -1,10 +1,10 @@
 <div class="container-l">
   <div class="header-page">
     <h1>Saved Resumes</h1>
-    <div class="icon-btn">
-      <i href="#" class="fa-regular fa-bookmark"></i>
-    </div>
   </div>
-  <%= link_to "<i class='fa-solid fa-arrow-left'></i>".html_safe + " " + "Back", resume_path %>
-<%# add iteration %>
+  <%= render "shared/back_button" %>
+  <div class="spacer"></div>
+  <% @resumes.each do |resume| %>
+    <%= render "resumes/card_resume", resume: resume %>
+  <% end %>
 </div>

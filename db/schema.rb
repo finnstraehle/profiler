@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_11_155912) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_13_210345) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,6 +23,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_11_155912) do
     t.datetime "updated_at", null: false
     t.date "date"
     t.text "notes"
+    t.bigint "resume_id"
+    t.bigint "cover_letter_id"
+    t.index ["cover_letter_id"], name: "index_applications_on_cover_letter_id"
+    t.index ["resume_id"], name: "index_applications_on_resume_id"
     t.index ["user_id"], name: "index_applications_on_user_id"
   end
 
@@ -67,6 +71,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_11_155912) do
     t.string "section_one"
     t.string "section_two"
     t.string "section_three"
+    t.string "company"
     t.index ["user_id"], name: "index_resumes_on_user_id"
   end
 
@@ -86,6 +91,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_11_155912) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "applications", "cover_letters"
+  add_foreign_key "applications", "resumes"
   add_foreign_key "applications", "users"
   add_foreign_key "cover_letter_entries", "cover_letters"
   add_foreign_key "cover_letters", "users"
