@@ -24,8 +24,7 @@
       <br>
       <div class="cl-entries">
         <% @cover_letter.cover_letter_entries.each do |entry| %>
-          <p><%= entry.text %></p>
-          <p></p>
+          <%= render "pages/cl_entry", entry: entry %>
         <% end %>
       </div>
       <br>

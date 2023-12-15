@@ -39,7 +39,7 @@ puts "Creating users..."
       link: Faker::Internet.url, # generating a random url
       notes: Faker::Quote.matz + " " + Faker::Quote.matz + " " + Faker::Quote.matz, # generating a random note
       date: Faker::Date.between(from: 20.days.ago, to: Date.today), # generating a random date
-      user: user # assigning the user to the application
+      user: user, # assigning the user to the application
     )
     application.save! # saving the application
   end

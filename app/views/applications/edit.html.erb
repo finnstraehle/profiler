@@ -9,7 +9,8 @@
       <%= f.input :link %>
       <%= f.input :status, collection: Application::STATUS %>
       <%= f.input :notes, :input_html => { :rows => 6 } %>
-      <%= f.hidden_field :date, value: @date %>
+      <%= f.input :resume_id, collection: @resumes %>
+      <%= f.input :cover_letter_id, collection: @cover_letters %>
       <div class="d-flex" style="margin-top: 50px">
         <%= f.button :submit, class:"button", style:"margin: 0 auto" %>
       </div>
