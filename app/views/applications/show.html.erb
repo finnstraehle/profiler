@@ -5,7 +5,7 @@
       <%= link_to "<i class='fa-solid fa-pen'></i>".html_safe, edit_application_path(@application) %>
     </div>
   </div>
-  <%= render "shared/back_button" %>
+  <%= link_to "<i class='fa-solid fa-arrow-left'></i>".html_safe + " " + "Back", applications_path %>
   <div class="sheet-application">
     <div class="sheet-application-header">
       <div>
@@ -19,5 +19,22 @@
     </div>
     <h4>Notes:</h4>
     <p><%= @application.notes %></p>
+    <div class="spacer"></div>
+    <div class="sheet-application-header">
+      <div>
+        <h4>Resume:</h4>
+        <div class="card-file">
+          <p>hallo</p>
+        </div>
+        <div class="card-file">
+          <% unless @resume.nil? %><p><%= @resume.name %> – <%= @resume.company %></p><% end %>
+        </div>
+      </div>
+      <div>
+        <h4>Cover Letter:</h4>
+        <div class="card-file">
+          <% unless @cover_letter.nil? %><p><%= @cover_letter.name %> – <%= @cover_letter.company %></p><% end %>
+        </div>
+      </div>
   </div>
 </div>
