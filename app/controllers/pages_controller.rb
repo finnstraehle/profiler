@@ -1,5 +1,7 @@
-class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :about ]
+class PagesController < ApplicationController # define the pages controller
+  skip_before_action :authenticate_user!, only: [ :home, :about ] # skip the authenticate user before action for the home and about actions
+
+  # defining all of the actions for the pages controller
 
   def home
   end
@@ -17,6 +19,6 @@ class PagesController < ApplicationController
     @entries_s3 = @resume.resume_entries.where(section: 3).sort_by { |e| e.end }.reverse # get the resume_entries for section 3
   end
 
-  def about
+  def about 
   end
 end

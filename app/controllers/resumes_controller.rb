@@ -1,18 +1,19 @@
-class ResumesController < ApplicationController
+class ResumesController < ApplicationController # define the resumes controller
+  # defining all of the actions for the resumes controller
 
   def index
-    @resumes = current_user.resumes.select { |e| e.is_saved == true }  # get all resumes for the current user
+    @resumes = current_user.resumes.select { |e| e.is_saved == true }  # get all resumes for the current user that are saved
   end
 
   def new
-    @resume = Resume.new
+    @resume = Resume.new  # create a new resume
   end
 
   def create
     @current_resume = current_user.resumes.find { |e| e.is_saved == false } # get the resume that is not saved
-    @resume = Resume.new(resume_params)
-    @resume.user = current_user
-    @resume.is_saved = true
+    @resume = Resume.new(resume_params) # create a new resume with the params
+    @resume.user = current_user # assign the current user to the resume
+    @resume.is_saved = true # assign the resume to be saved
     @current_resume.resume_entries.each do |entry| # get all resume entries from the current resume
       @resume_entry = ResumeEntry.new( # create a new resume entry
         title: entry.title, # assign the title from the current resume entry to the new resume entry
@@ -27,10 +28,10 @@ class ResumesController < ApplicationController
       )
       @resume_entry.save! # save the resume entry
     end
-    if @resume.save
-      redirect_to resumes_path
+    if @resume.save # save the resume
+      redirect_to resumes_path  # redirect to the resumes path if the resume is saved
     else
-      render :new
+      render :new # render the new template if the resume is not saved
     end
   end
 
@@ -40,31 +41,31 @@ class ResumesController < ApplicationController
     @entries_s1 = @resume.resume_entries.where(section: 1).sort_by { |e| e.end }.reverse # get the resume_entries for section 1
     @entries_s2 = @resume.resume_entries.where(section: 2).sort_by { |e| e.end }.reverse # get the resume_entries for section 2
     @entries_s3 = @resume.resume_entries.where(section: 3).sort_by { |e| e.end }.reverse # get the resume_entries for section 3
-    respond_to do |format|
-      format.pdf do
-        render pdf: "my_resume", template: "resumes/cv_pdf", formats: :html, page_sitze: 'a4'
+    respond_to do |format|  # respond to the format of the request  (html or pdf) with the format block
+      format.pdf do # if the format is pdf
+        render pdf: "my_resume", template: "resumes/cv_pdf", formats: :html, page_sitze: 'a4' # render the pdf template for the resume
       end
     end
   end
 
   def update
-    @resume = Resume.find(params[:id])
-    if @resume.update(resume_params)
-      redirect_to resumes_path
+    @resume = Resume.find(params[:id])  # get the resume with the id from the params
+    if @resume.update(resume_params)  # update the resume with the params
+      redirect_to resumes_path  # redirect to the resumes path
     else
-      render :edit
+      render :edit  # render the edit template if the resume is not updated
     end
   end
 
   def destroy
-    @resume = Resume.find(params[:id])
-    @resume.destroy
-    redirect_to resumes_path
+    @resume = Resume.find(params[:id])  # get the resume with the id from the params
+    @resume.destroy # destroy the resume
+    redirect_to resumes_path  # redirect to the resumes path
   end
 
-  private
+  private # private methods for the resumes controller to use
 
-  def resume_params
-    params.require(:resume).permit(:name, :company)
+  def resume_params # define the resume params for the resumes controller
+    params.require(:resume).permit(:name, :company) # require the resume params 
   end
 end
