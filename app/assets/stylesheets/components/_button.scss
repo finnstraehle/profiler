@@ -1,34 +1,33 @@
 .button {
-  width: fit-content;
-  height: 35px;
-  flex-shrink: 0;
-  border-radius: 50px;
-  border: none;
-  background: $indigo;
-  color: #fff !important;
-  text-align: center;
-  padding: 5px 35px;
-  transition: 0.5s ease;
-  border: none !important;
-  &:hover {
-    background: $indigo-dark;
+  width: fit-content; // make the button width fit the content
+  height: 35px; // make the button 35px tall
+  flex-shrink: 0; // make the button not shrink when the screen is small
+  border-radius: 50px;  // round the corners
+  background: $indigo;  // make the background a shade of indigo
+  color: #fff !important; // make the text white
+  text-align: center; // center the text
+  padding: 5px 35px;  // add a little padding (5px top and bottom, 35px left and right)
+  transition: 0.5s ease;  // add a little transition  (0.5s = 0.5 seconds)  (ease = ease in and ease out) (this will make the button transition smoothly)
+  border: none !important;  // remove the border  (important = override any other styles)
+  &:hover { // when the button is hovered
+    background: $indigo-dark; // make the button a dark shade of indigo
   }
   a {
-    color: #fff;
+    color: #fff;  // make the text white
   }
 }
 
 
-.btn-outline {
-  width: 100%;
-  border: 3px solid $indigo;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: $indigo;
-  font-size: 18px;
-  padding: 10px 30px;
-  &:hover {
-    border: 3px solid black;
+.btn-outline {  // this is a button class that we will use to make an outline button
+  width: 100%;  // make the button 100% wide (this will make the button fill the width of the container)
+  border: 3px solid $indigo;  // make the border a shade of indigo  (3px = 3 pixels)  (solid = solid line)
+  display: flex;  // display the button as a flexbox  (this will make the elements in the button display side by side)
+  align-items: center;  // center the elements vertically in the button
+  justify-content: center;  // center the elements horizontally in the button
+  color: $indigo; // make the text a shade of indigo
+  font-size: 18px;  // make the font size 18px
+  padding: 10px 30px; // add a little padding (10px top and bottom, 30px left and right)
+  &:hover { // when the button is hovered
+    border: 3px solid black;  // make the border black
   }
 }

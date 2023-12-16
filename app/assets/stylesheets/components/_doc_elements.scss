@@ -1,44 +1,14 @@
-.sheet-doc {
-  background: white;
-  width: 900px;
+.sheet-doc {  // this is the class for the entire sheet
+  background: white;  // make the background white
+  width: 900px; // make the width 900px
   height: 1278px; // to get the exact ratio of an A4 sheet
-  margin: 40px auto 700px auto;
-  padding: 70px 100px;
-  border-radius: 10px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  font-family: 'Times New Roman', Times, serif !important;
+  margin: 40px auto 700px auto; // add a little space above the sheet and center it horizontally  (auto = automatically)
+  padding: 70px 100px;  // add a little padding to the sheet (70px top, 100px right, 70px bottom, 100px left)
+  border-radius: 10px;  // round the corners
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); // add a little box shadow
+  font-family: 'Times New Roman', Times, serif !important;  // use the Times New Roman font for the sheet (the !important is to override the default font)
 }
 
 .doc-header {
-  text-align: center;
+  text-align: center; // center the text  (this will center the text horizontally)
 }
-
-.sheet-edit {
-  position: fixed;
-  bottom: 50px;
-  right: calc(50vw - 605px); // to align on the rightof the container
-  background: $grey-minimal;
-  width: 330px;
-  height: 50vh;
-  border-radius: 10px;
-  border: 7px solid $indigo-light;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
-  padding: 30px;
-}
-
-.sheet-edit .sheet-edit-title {
-  position: absolute;
-  top: -22.5px;
-  left: calc(50% - 22.5px);
-  background: $indigo-dark;
-  height: 45px;
-  width: 45px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  i {
-    color: $grey-minimal;
-  }
-};

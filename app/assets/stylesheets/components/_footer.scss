@@ -1,62 +1,62 @@
 footer {
-  background-color: black;
-  width: 100%;
-  text-align: center;
+  background-color: black;  // make the background black
+  width: 100%;  // make the footer 100% wide  (this will make the footer fill the width of the page)
+  text-align: center; // center the text
 }
 
 footer .footer-container {
-  padding: 40px 0 20px 0;
-  width: 900px;
-  margin: 0 auto;
+  padding: 40px 0 20px 0; // add a little padding (40px top, 0 right, 20px bottom, 0 left)
+  width: 900px; // make the footer 900px wide
+  margin: 0 auto; // center the footer horizontally  (auto = automatically)
 }
 
 footer .footer-container {
   p {
-    font-size: 13px;
-    margin-bottom: 0;
-    color: #fff;
+    font-size: 13px;  // make the font size 13px
+    margin-bottom: 0; // remove the default margin from the p
+    color: #fff;  // make the text white
   }
   a {
-    font-size: 13px;
-    color: grey;
-    transition: all 0.2s ease-in-out;
-    &:hover {
-      color: $red;
+    font-size: 13px;  // make the font size 13px
+    color: grey;  // make the text grey
+    transition: all 0.2s ease-in-out; // add a little transition  (0.2s = 0.2 seconds)  (ease-in-out = ease in and ease out) (this will make the button transition smoothly)
+    &:hover { // when the link is hovered
+      color: $red;  // make the text a shade of red
     }
   }
   h5 {
-    color: white;
-    font-size: 15px;
-    margin-bottom: 10px;
-    margin-top: 20px;
+    color: white; // make the text white
+    font-size: 15px;  // make the font size 15px
+    margin-bottom: 10px;  // add a little space below the h5
+    margin-top: 20px; // add a little space above the h5
   }
 }
 
 .body-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
-  width: 100%;
+  display: flex;  // display as flexbox  (this will make the elements in the container display side by side)
+  flex-direction: column; // make the container a column flexbox
+  justify-content: space-between; // space out the elements in the container
+  min-height: 100vh;  // make the container 100vh tall (100vh = 100% of the viewport height)
+  width: 100%;  // make the container 100% wide  (this will make the container fill the width of the page)
 }
 
 .footer-row {
-  display: flex;
-  justify-content: space-between;
-  text-align: left;
-  margin-bottom: 40px;
+  display: flex;  // display as flexbox  (this will make the elements in the row display side by side)
+  justify-content: space-between; // space out the elements in the row
+  text-align: left; // left align the text
+  margin-bottom: 40px;  // add a little space below the row
 }
 
 // Responsive
-@media (max-width: 1400px) {
+@media (max-width: 1400px) {  // when the screen is less than 1400px wide
   footer .footer-container {
-    width: 86vw;
+    width: 86vw;  // make the footer 86vw wide (86vw = 86% of the viewport width)
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 800px) { // when the screen is less than 800px wide
   .footer-row {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column; // make the row a column flexbox  (this will make the elements in the row display on top of each other)
+    text-align: center; // center the text  
   }
 }

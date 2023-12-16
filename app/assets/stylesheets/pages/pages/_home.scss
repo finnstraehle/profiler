@@ -1,96 +1,96 @@
 .home-banner {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  position: relative; // position relative so we can position the button
+  background-size: cover; // cover the entire background
+  background-position: center;  // center the background
+  height: 500px;  // set the height of the banner
+  display: flex;  // display the banner as a flexbox
+  flex-direction: column; // make the banner a column flexbox
+  justify-content: center;  // center the elements vertically in the banner
+  align-items: center;  // center the elements horizontally in the banner
+  color: white; // make the text white
+  font-size: 24px;  // make the font size 24px
+  font-weight: bold;  // make the font weight bold
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2); // add a little text shadow
 }
 
 .home-banner .btn-start {
-  position: absolute;
-  bottom: 170px;
-  color: $grey-minimal !important;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 10px 60px;
-  border: 3px solid $indigo;
-  font-size: 18px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  &:hover {
-    border: 3px solid black;
+  position: absolute; // position absolute so we can position the button
+  bottom: 170px;  // position the button 170px from the bottom
+  color: $grey-minimal !important;  // make the button color a minimal shade of grey
+  background-color: rgba(0, 0, 0, 0.3); // make the button background a transparent black
+  padding: 10px 60px; // add a little padding to the button (10px top, 60px right, 10px bottom, 60px left)
+  border: 3px solid $indigo;  // make the button border a shade of indigo
+  font-size: 18px;  // make the font size 18px
+  box-shadow: 0 0 15px rgba(0,0,0,0.2); // add a little box shadow
+  &:hover { // when the button is hovered
+    border: 3px solid black;  // make the button border black
   }
 }
 
 .banner-grey {
-  background-color: $grey;
+  background-color: $grey;  // make the background a shade of grey
 }
 
 .home-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  text-align: center;
-  grid-gap: 40px;
+  display: grid;  // display as grid  (this will make the elements in the grid display side by side)
+  grid-template-columns: 1fr 1fr 1fr; // make the grid 3 columns, each 1fr wide (1fr = 1 fraction of the available space)
+  text-align: center; // center the text
+  grid-gap: 40px; // add a little space between the grid items
 }
 
 .home-grid .card-home {
-  width: 100%;
-  min-height: fit-content;
-  height: 100%;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  padding: 30px;
-  background-color: white;
-  transition: all 0.2s ease-in-out;
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  width: 100%;  // make the card 100% wide (1fr)  (1fr = 1 fraction of the available space)
+  min-height: fit-content;  // make the card height fit the content
+  height: 100%; // make the card height 100% (1fr)  (1fr = 1 fraction of the available space)
+  border-radius: 10px;  // round the corners
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); // add a little box shadow
+  padding: 30px;  // add a little padding
+  background-color: white;  // make the background white
+  transition: all 0.2s ease-in-out; // add a little transition
+  &:hover { // when the card is hovered
+    transform: translateY(-3px);  // move the card up 3px
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);  // add a little box shadow
   }
 }
 
 .card-home img {
-  width: 150px;
-  height: 150px;
-  margin-bottom: 20px;
+  width: 150px; // make the image 150px wide
+  height: 150px;  // make the image 150px tall
+  margin-bottom: 20px;  // add a little space below the image
 }
 
 .blue-line {
-  width: 100px;
-  height: 3px;
-  border-radius: 5px;
-  background-color: $indigo;
-  margin: 0 auto;
+  width: 100px; // make the line 100px wide
+  height: 3px;  // make the line 3px tall
+  border-radius: 5px; // round the corners
+  background-color: $indigo;  // make the background a shade of indigo
+  margin: 0 auto; // center the line  (auto = automatically)
 }
 
 .grid-buttons {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 20px;
+  display: grid;  // display as grid  (this will make the buttons display side by side)
+  grid-template-columns: 1fr 1fr 1fr 1fr; // make the grid 4 columns, each 1fr wide (1fr = 1 fraction of the available space)
+  grid-gap: 20px; // add a little space between the grid items
 }
 
 // Responsive
-@media (max-width: 1400px) {
+@media (max-width: 1400px) {  // when the screen is less than 1400px wide
   .card-home {
-    height: 500px;
+    height: 500px;  // make the card 500px tall
   }
   .grid-buttons {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; // make the grid 2 columns, each 1fr wide (1fr = 1 fraction of the available space)
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 800px) { // when the screen is less than 800px wide
   .card-home {
-    height: 500px;
+    height: 500px;  // make the card 500px tall
   }
   .grid-buttons {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; // make the grid 1 column, each 1fr wide (1fr = 1 fraction of the available space)
   }
   .home-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; // make the grid 1 column, each 1fr wide (1fr = 1 fraction of the available space)
   }
 }

@@ -1,57 +1,57 @@
 .cv-entry-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; // display the header as a flexbox (this will make the elements in the header display side by side)
+  justify-content: space-between; // space out the elements in the header
+  align-items: center; // center the elements vertically in the header
 }
 
 .sheet-doc hr {
-  margin: 5px 0;
+  margin: 5px 0; // add a little space above and below the hr
 }
 
 .sheet-doc h4 {
-  margin: 0;
+  margin: 0; // remove the default margin from the h4
 }
 
 .cv-entry-header p {
-  margin: 0;
+  margin: 0; // remove the default margin from the p
 }
 
 .cv-entry {
-  position: relative;
+  position: relative; // position relative so we can position the buttons
   p {
-    color: black;
+    color: black; // make the text black
   }
-  &:hover {
-    border-radius: 10px;
-    padding: 10px;
-    background-color: $indigo-light;
+  &:hover { // when the entry is hovered
+    border-radius: 10px; // round the corners
+    padding: 10px; // add some padding
+    background-color: $indigo-light; // make the background a light shade of indigo
     .cv-entry-buttons {
-      display: flex;
+      display: flex; // display the buttons
     }
   }
 }
 
 .cv-entry-buttons {
-  position: absolute;
-  top: calc(50% - 22.5px);
-  right: calc(50% - 65px);
-  display: none;
+  position: absolute; // position absolute so we can position the buttons
+  top: calc(50% - 22.5px); // position the buttons in the middle of the entry by subtracting half the height of the buttons
+  right: calc(50% - 65px); // position the buttons in the middle of the entry by subtracting half the width of the buttons
+  display: none; // hide the buttons by default, with the &:hover on the entry, we will display them
 }
 
 .cv-entry-buttons .icon-btn {
-  height: 45px;
-  width: 45px;
-  margin: 0 10px;
-  border-radius: 50%;
-  background: $indigo;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
+  height: 45px; // make the buttons 45px tall
+  width: 45px; // make the buttons 45px wide
+  margin: 0 10px; // add a little space between the buttons, 0 on top and bottom, 10px on left and right
+  border-radius: 50%; // make the buttons round
+  background: $indigo; // make the buttons indigo
+  display: flex; // display the buttons as a flexbox  (this will make the elements in the buttons display side by side)
+  justify-content: center; // center the elements horizontally in the buttons
+  align-items: center; // center the elements vertically in the buttons
+  font-size: 20px; // make the font size 20px
   i {
-    color: $grey-minimal;
+    color: $grey-minimal; // make the icon color a minimal shade of grey
   }
   &:hover {
-    background: $indigo-dark;
+    background: $indigo-dark; // make the buttons a dark shade of indigo when hovered
   }
 }

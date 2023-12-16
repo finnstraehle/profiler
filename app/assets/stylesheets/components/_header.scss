@@ -1,24 +1,24 @@
 .header-page {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
+  display: flex;  // display as flexbox  (this will make the elements in the header display side by side)
+  justify-content: space-between; // space out the elements in the header
+  align-items: center;  // center the elements vertically in the header
+  margin-bottom: 8px; // add a little space below the header
 }
 
 .header-page .icon-btn {
-  height: 45px;
-  width: 45px;
-  margin-left: 15px;
-  border-radius: 50%;
-  background: $indigo;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
+  height: 45px; // make the buttons 45px tall
+  width: 45px;  // make the buttons 45px wide
+  margin-left: 15px;  // add a little space between the buttons
+  border-radius: 50%; // make the buttons round
+  background: $indigo;  // make the buttons indigo
+  display: flex;  // display the buttons as a flexbox  (this will make the elements in the buttons display side by side)
+  justify-content: center;  // center the elements horizontally in the buttons
+  align-items: center;  // center the elements vertically in the buttons
+  font-size: 20px;  // make the font size 20px
   i {
-    color: $grey-minimal;
+    color: $grey-minimal; // make the icon color a minimal shade of grey
   }
   &:hover {
-    background: $indigo-dark;
+    background: $indigo-dark; // make the buttons a dark shade of indigo when hovered
   }
 }

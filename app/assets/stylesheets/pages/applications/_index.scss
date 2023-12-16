@@ -1,24 +1,24 @@
 .card-saved {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  background: white;
-  padding: 20px 40px 20px 30px;
-  border-radius: 10px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  &:hover {
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-    .card-saved-buttons {
-      opacity: 0.7;
+  display: flex; // display the card as a flexbox (this will make the elements in the card display side by side)
+  justify-content: space-between; // space out the elements in the card horizontally  (space-between will space out the elements and push them to the edges)
+  align-items: center;  // center the elements vertically in the card
+  margin-bottom: 20px;  // add a little space below the card
+  background: white;  // make the background white
+  padding: 20px 40px 20px 30px; // add a little padding to the card (20px top, 40px right, 20px bottom, 30px left)
+  border-radius: 10px;  // round the corners
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); // add a little box shadow
+  &:hover { // when the card is hovered
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); // add a little box shadow
+    .card-saved-buttons { // when the card is hovered, display the buttons
+      opacity: 0.7; // make the buttons a little transparent
     }
   }
 }
 
 .card-saved .card-saved-buttons {
-  opacity: 0;
-  font-size: 20px;
+  opacity: 0;   // hide the buttons by default, with the &:hover on the card, we will display them
+  font-size: 20px;  // make the font size 20px
   &:hover {
-    opacity: 1;
+    opacity: 1; // make the buttons fully opaque when hovered
   }
 }

@@ -1,6 +1,6 @@
 .alert {
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
-  z-index: 1000;
+  position: fixed;  // position fixed so we can position the alert
+  bottom: 16px; // position the alert 16px from the bottom
+  right: 16px;  // position the alert 16px from the right
+  z-index: 1000;  // make the alert appear on top of everything else
 }
