@@ -15,3 +15,43 @@
   border-radius: 10px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
+
+.cl_entry {
+  position: relative;
+  p {
+    color: black;
+  }
+  &:hover {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: $indigo-light;
+    .cl-entry-buttons {
+      display: flex;
+    }
+  }
+}
+
+.cl_entry .cl-entry-buttons {
+  position: absolute;
+  top: calc(50% - 22.5px);
+  right: calc(50% - 65px);
+  display: none;
+}
+
+.cl-entry-buttons .icon-btn {
+  height: 45px;
+  width: 45px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background: $indigo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  i {
+    color: $grey-minimal;
+  }
+  &:hover {
+    background: $indigo-dark;
+  }
+}

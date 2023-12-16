@@ -1,0 +1,21 @@
+<div class="container-l">
+  <div class="header-page">
+    <h1>New Experience</h1>
+  </div>
+  <%= render "shared/back_button" %>
+  <div class="sheet-application">
+    <%= simple_form_for(@resume_entry) do |f| %>
+      <%= f.input :section, collection: [1, 2, 3] %>
+      <%= f.input :title %>
+      <%= f.input :subtitle %>
+      <%= f.input :location %>
+      <%= f.input :bullet_one %>
+      <%= f.input :bullet_two %>
+      <%= f.input :start %>
+      <%= f.input :end %>
+      <div class="d-flex" style="margin-top: 50px">
+        <%= f.button :submit, class:"button", style:"margin: 0 auto" %>
+      </div>
+    <% end %>
+  </div>
+</div>
