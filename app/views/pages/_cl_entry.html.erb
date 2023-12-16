@@ -1,4 +1,15 @@
 <div class="cl_entry">
   <p><%= entry.text %></p>
   <p></p>
+  <div class="cl-entry-buttons">
+    <div class="icon-btn">
+      <%= link_to "<i class='fa-solid fa-pen'></i>".html_safe, edit_cover_letter_entry_path(entry) %>
+    </div>
+    <div class="icon-btn">
+      <%= link_to "<i class='fa-solid fa-eye-slash'></i>".html_safe, root_path %>
+    </div>
+    <div class="icon-btn">
+      <%= link_to "<i class='fa-regular fa-trash-alt'></i>".html_safe, cover_letter_entry_path(entry), data: { turbo_method: :delete, turbo_confirm: "Are you sure that you want to delete this Entry?"} %>
+    </div>
+  </div>
 </div>

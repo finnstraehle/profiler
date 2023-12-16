@@ -1,11 +1,24 @@
-<div class="cv-entry-header">
-  <div>
-    <p><strong><%= entry.title %></strong></p>
-    <p><i><%= entry.subtitle %></i></p>
+<div class="cv-entry">
+  <div class="cv-entry-header">
+    <div>
+      <p><strong><%= entry.title %></strong></p>
+      <p><i><%= entry.subtitle %></i></p>
+    </div>
+    <div>
+      <p><strong><%= entry.start.strftime('%m/%Y') %>–<%= entry.end.strftime('%m/%Y') %></strong></p>
+      <p><i><%= entry.location %></i></p>
+    </div>
   </div>
-  <div>
-    <p><strong><%= entry.start.strftime('%m/%Y') %>–<%= entry.end.strftime('%m/%Y') %></strong></p>
-    <p><i><%= entry.location %></i></p>
+  <p>- asdhf oisah flkjasdf lkasdjhf laksdjfh asdlkjfh aslkjfdsa iuqhef</p>
+  <div class="cv-entry-buttons">
+    <div class="icon-btn">
+      <%= link_to "<i class='fa-solid fa-pen'></i>".html_safe, edit_resume_entry_path(entry) %>
+    </div>
+    <div class="icon-btn">
+      <%= link_to "<i class='fa-solid fa-eye-slash'></i>".html_safe, root_path %>
+    </div>
+    <div class="icon-btn">
+      <%= link_to "<i class='fa-regular fa-trash-alt'></i>".html_safe, resume_entry_path(entry), data: { turbo_method: :delete, turbo_confirm: "Are you sure that you want to delete this Entry?"} %>
+    </div>
   </div>
 </div>
-<p>- asdhf oisah flkjasdf lkasdjhf laksdjfh asdlkjfh aslkjfdsa iuqhef</p>
