@@ -1,6 +1,6 @@
 <h1>– Project Description –</h1>
 
-Profiler is a technical project created in the "Coding Introduction" course at HSG University, utilizing Ruby on Rails. It's a web application designed for managing CVs, Cover Letters, and job applications, showcasing several key aspects of web development.
+Profiler is a technical project created in the "Skills: Programming – Introduction Level" course at HSG University, utilizing Ruby on Rails. It's a web application designed for managing CVs, Cover Letters, and job applications, showcasing several key aspects of web development.
 
 The application implements CRUD actions, allowing users to create, read, update, and delete their professional documents. This is a fundamental part of the application's interactivity and data management.
 
