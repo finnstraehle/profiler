@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users  # Devise routes for user authentication
+  devise_for :users  # Devise routes for user authentication, registration, etc.
   root to: 'pages#home'  # Root URL route to 'home' action in 'pages' controller
   get "/cover_letter", to: "pages#cover_letter", as: :coverletter  # Route for cover letter page
   get "/cv", to: "pages#cv", as: :cv  # Route for CV page
