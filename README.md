@@ -1,5 +1,4 @@
-<h1>– Elevate Your Professional Game with Profiler –</h1>
-
+<h1>– Project Description –</h1>
 
 Profiler is a technical project created in the "Coding Introduction" course at HSG University, utilizing Ruby on Rails. It's a web application designed for managing CVs, Cover Letters, and job applications, showcasing several key aspects of web development.
 
@@ -16,12 +15,43 @@ The front-end of Profiler is marked by the use of shared components, promoting r
 Overall, Profiler serves as a comprehensive example of web development using Ruby on Rails, covering everything from database management and MVC architecture to user interface design and shared component utilization.
 
 
+<h1>– How to Use –</h1>
+
+This application has a seed file, which populates the database for you. So please log-in with one of the pre-built accounts:
+
+1. Download as ZIP-File
+2. In your Terminal, navigate to the folder "profiler-master"
+3. type rails serve
+4. open the local link
+5. login with: a@profilertest.com, password: 111111 (or b@.. c@.. d@.. etc., same password)
+
+when running in to issues, run:
+1. rails db:drop
+2. rails db:create
+3. rails db:migrate
+4. rails db:seed
+
+
+<h1>– Database Schema Visualisation –</h1>
+
+![Alt text](image.png)
+
+
+<h1>– Our Workflow & Experience –</h1>
+
+We want to share an overview of our team's workflow and learning experience for the Profiler project.
+
+We utilized a single GitHub account for our project, with each team member working on individual branches named after themselves. This approach allowed us to independently focus on different aspects of the project while maintaining a cohesive development process. Regular commits, pulls, and merges were integral to our workflow, ensuring everyone's contributions were synchronized.
+
+In terms of development, our focus was on Ruby, HTML, and CSS, adhering to Object-Oriented Programming principles. Each of us started by developing a specific page (Resume, Cover Letter, Applications, Home Page), with Finn taking the lead in the initial setup and the final stage.
+
+The project was particularly enlightening due to the varied levels of experience within our team. Members with more coding experience shared their knowledge, helping those newer to these languages grasp more complex concepts and apply them practically, such as controllers, models and the MVC-architecture.
+
+On the other hand, experienced team members solidified their knowledge by guiding others, which also highlighted areas for their own improvement. The project emphasized the importance of clear communication, especially when integrating different parts of the application simultaneously.
+
+In conclusion, this project was a great learning experience. It wasn't just about developing a web application, but also about fostering a team environment where each member could contribute, learn, and grow, regardless of their prior experience. This project turned out to be a rewarding journey for all of us, combining coding skills in different languages.
+
 
 Thank you for visiting Profiler!
 
 Finn S., Luc J., This S. & Patric H.
-
-
-
-Schema of our database:
-![Alt text](image.png)
