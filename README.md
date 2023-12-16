@@ -1,4 +1,4 @@
-– Elevate Your Professional Game with Profiler –
+<h1>– Elevate Your Professional Game with Profiler –</h1>
 
 
 Profiler is a technical project created in the "Coding Introduction" course at HSG University, utilizing Ruby on Rails. It's a web application designed for managing CVs, Cover Letters, and job applications, showcasing several key aspects of web development.
@@ -20,3 +20,8 @@ Overall, Profiler serves as a comprehensive example of web development using Rub
 Thank you for visiting Profiler!
 
 Finn S., Luc J., This S. & Patric H.
+
+
+
+Schema of our database:
+![Alt text](image.png)
