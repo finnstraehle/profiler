@@ -19,13 +19,13 @@ Overall, Profiler serves as a comprehensive example of web development using Rub
 
 This application has a seed file, which populates the database for you. So please log-in with one of the pre-built accounts:
 
-1. Download as ZIP-File
+1. Download as ZIP-File, by clicking on the green button, saying "code", at the top of this page
 2. In your Terminal, navigate to the folder "profiler-master"
-3. type rails serve
+3. type "rails serve" in your terminal
 4. open the local link
 5. login with: a@profilertest.com, password: 111111 (or b@.. c@.. d@.. etc., same password)
 
-when running in to issues, run:
+when running in to issues, run the following commands in your terminal:
 1. rails db:drop
 2. rails db:create
 3. rails db:migrate
