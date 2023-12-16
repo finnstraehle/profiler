@@ -1,34 +1,34 @@
 // defining reusable containers with different sizes
-.container-s {
-  width: 600px;
-  margin: 0 auto;
-  padding: 30px 0;
+.container-s {  // this is a container class that we will use to make a small container
+  width: 600px; // make the container 600px wide
+  margin: 0 auto; // center the container horizontally  (auto = automatically)
+  padding: 30px 0;  // add a little padding (30px top and bottom, 0 left and right)
 }
 
-.container-m {
-  width: 900px;
-  margin: 0 auto;
-  padding: 30px 0;
+.container-m {  // this is a container class that we will use to make a medium container
+  width: 900px; // make the container 900px wide
+  margin: 0 auto; // center the container horizontally  (auto = automatically)
+  padding: 30px 0;  // add a little padding (30px top and bottom, 0 left and right)
 }
 
-.container-l {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 30px 0;
+.container-l {  // this is a container class that we will use to make a large container
+  width: 1200px;  // make the container 1200px wide
+  margin: 0 auto; // center the container horizontally  (auto = automatically)
+  padding: 30px 0;  // add a little padding (30px top and bottom, 0 left and right)
 }
 
 
 // Responsive sizes for mobile
-@media (max-width: 1400px) {
+@media (max-width: 1400px) {  // when the screen is less than 1400px wide
   .container-l {
-    width: 86vw;
+    width: 86vw;  // make the container 86% of the screen width (vw = viewport width)
   }
 
   .container-m {
-    width: 86vw;
+    width: 86vw;  // make the container 86% of the screen width (vw = viewport width)
   }
 
   .container-s {
-    width: 86vw;
+    width: 86vw;  // make the container 86% of the screen width (vw = viewport width)
   }
 }

@@ -1,15 +1,15 @@
-<%= link_to application_path(application) do %>
-  <% status_color = application.status == 'Accepted' ? 'green' : application.status == 'Rejected' ? 'red' : 'orange' %>
-  <div class="card-saved">
-    <div class="card-saved-content">
-      <h4><%= application.company %></h4>
-      <div class="d-flex">
-        <p style="color: <%= status_color %>;"><%= application.status %></p>
-        <p>&nbsp– <%= @date.mjd - application.date.mjd != 0 ? @date.mjd - application.date.mjd : "" %> <%= @date.mjd - application.date.mjd == 1 ? "day" : @date.mjd - application.date.mjd == 0 ? "today" : "days" %></p>
+<%= link_to application_path(application) do %> <!-- make this element clickable and link to the applications/show page -->
+  <% status_color = application.status == 'Accepted' ? 'green' : application.status == 'Rejected' ? 'red' : 'orange' %> <!-- set the color of the status text based on the status -->
+  <div class="card-saved">  <!-- create a card for each application -->
+    <div class="card-saved-content">  <!-- create a card content for each application -->
+      <h4><%= application.company %></h4> <!-- display the company name -->
+      <div class="d-flex">  <!-- create a flexbox for the status and date with bootstrap -->
+        <p style="color: <%= status_color %>;"><%= application.status %></p>  <!-- display the status with the status color -->
+        <p>&nbsp– <%= @date.mjd - application.date.mjd != 0 ? @date.mjd - application.date.mjd : "" %> <%= @date.mjd - application.date.mjd == 1 ? "day" : @date.mjd - application.date.mjd == 0 ? "today" : "days" %></p>  <!-- display the date, deciding if "days"/"day" or "today" -->
       </div>
     </div>
     <div class="card-saved-buttons">
-      <%= link_to "<i class='fa-regular fa-trash-alt'></i>".html_safe, application_path(application), data: { turbo_method: :delete, turbo_confirm: "Are you sure that you want to delete this Application?"} %>
+      <%= link_to "<i class='fa-regular fa-trash-alt'></i>".html_safe, application_path(application), data: { turbo_method: :delete, turbo_confirm: "Are you sure that you want to delete this Application?"} %>  <!-- create a delete button for each application, with a confirmation -->
     </div>
   </div>
-<% end %>
+<% end %> <!-- end the link -->

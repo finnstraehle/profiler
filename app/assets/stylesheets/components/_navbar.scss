@@ -1,47 +1,47 @@
 .navbar {
-  width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
-  margin: 30px auto 20px auto;
+  width: 1200px;  // make the navbar 1200px wide
+  display: flex;  // display as flexbox  (this will make the elements in the header display side by side)
+  justify-content: space-between; // space out the elements in the header
+  align-items: center;  // center the elements vertically in the header
+  padding: 0; // remove the padding
+  margin: 30px auto 20px auto;  // add a little space above the navbar and center it horizontally  (auto = automatically)
 }
 
 .navbar img {
-  width: 160px;
+  width: 160px; // make the logo 160px wide
 }
 
 .navbar .bar {
-  width: 75%;
-  padding: 10px 0;
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: $grey-minimal;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  width: 75%; // make the bar 75% wide
+  padding: 10px 0;  // add a little padding to the bar (10px top, 0 right, 10px bottom, 0 left)
+  border-radius: 10px;  // round the corners
+  display: flex;  // display as flexbox  (this will make the elements in the header display side by side)
+  justify-content: space-around;  // space out the elements in the header
+  align-items: center;  // center the elements vertically in the header
+  background-color: $grey-minimal;  // make the background a minimal shade of grey
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); // add a little box shadow
 }
 
 .navbar .nav-item {
-    color: rgb(0, 0, 0);
-    font-size: 1rem;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
+    color: rgb(0, 0, 0);  // make the text black
+    font-size: 1rem;  // make the font size 1rem  (1rem = 16px)
+    font-weight: 500; // make the font weight 500
+    text-decoration: none;  // remove the underline from the text
+    transition: all 0.2s ease-in-out; // add a little transition  (0.2s = 0.2 seconds)  (ease-in-out = ease in and ease out)  (all = all properties)
     &:hover { // turns indigo, when the user hovers over the nav item
-      color: $indigo !important;
+      color: $indigo !important;  // make the text a shade of indigo  (important = override any other styles)
     }
 }
 
 // Responsive
-@media (max-width: 1400px) {
+@media (max-width: 1400px) {  // when the screen is less than 1400px wide
   .navbar {
-    width: 86vw;
+    width: 86vw;  // make the navbar 86vw wide (86vw = 86% of the viewport width)
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 800px) { // when the screen is less than 800px wide
   .navbar .bar {
-    display: none;
+    display: none;  // hide the bar (this will hide the bar when the screen is less than 800px wide)
   }
 }

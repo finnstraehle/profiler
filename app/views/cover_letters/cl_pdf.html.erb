@@ -1,18 +1,19 @@
-<div style="padding: 30px 50px; font-size: larger">
-  <div style="text-align: center">
-    <h2><%= @user.full_name %></h2>
-    <p><%= @user.address %> | <%= @user.email %> | <%= @user.phone %></p>
+<!-- have to use in-line CSS because of PDF, CSS file don't work -->
+<div style="padding: 30px 50px; font-size: larger"> <!-- create a container for the cover letter pdf -->
+  <div style="text-align: center">  <!-- create a header for the cover letter pdf -->
+    <h2><%= @user.full_name %></h2> <!-- display the user's full name -->
+    <p><%= @user.address %> | <%= @user.email %> | <%= @user.phone %></p> <!-- display the user's address, email and phone number -->
     <br>
   </div>
   <p>Dear Hiring Manager,</p>
   <br>
   <div>
-    <% @cover_letter.cover_letter_entries.each do |entry| %>
-      <p text-align: justify"><%= entry.text %></p>
+    <% @cover_letter.cover_letter_entries.each do |entry| %>  <!-- loop through the cover letter entries -->
+      <p style="text-align: justify"><%= entry.text %></p>  <!-- display the text -->
       <p></p>
-    <% end %>
+    <% end %> <!-- end the loop -->
   </div>
   <br>
   <p>Sincerly,</p>
-  <p><%= @user.full_name %></p>
+  <p><%= @user.full_name %></p> <!-- display the user's full name -->
 </div>

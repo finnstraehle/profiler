@@ -1,15 +1,15 @@
-<div class="container-l">
-  <div class="header-page">
+<div class="container-l"> <!-- create a container for the cover letters -->
+  <div class="header-page"> <!-- create a header for the cover letters -->
     <h1>Save Current Cover Letter</h1>
   </div>
-  <%= render "shared/back_button" %>
-  <div class="sheet-application">
-    <%= simple_form_for(@cover_letter) do |f| %>
-      <%= f.input :name %>
-      <%= f.input :company %>
-      <div class="d-flex" style="margin-top: 50px">
+  <%= render "shared/back_button" %>  <!-- render the back button -->
+  <div class="sheet-application"> <!-- create a sheet for the cover letters -->
+    <%= simple_form_for(@cover_letter) do |f| %>  <!-- create a form for the cover letters -->
+      <%= f.input :name %>  <!-- create an input field for the name -->
+      <%= f.input :company %> <!-- create an input field for the company name -->
+      <div class="d-flex" style="margin-top: 50px"> <!-- create a submit button -->
         <%= f.button :submit, class:"button", style:"margin: 0 auto" %>
       </div>
-    <% end %>
+    <% end %> <!-- end the form -->
   </div>
 </div>

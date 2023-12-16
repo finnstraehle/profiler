@@ -1,6 +1,5 @@
-// Define variables for your color scheme
 
-// For example:
+// define colors for our color scheme (these are the colors we will use throughout our application)
 $blue: #0D6EFD;
 $yellow: #FFC65A;
 $orange: #E67E22;
@@ -8,10 +7,8 @@ $green: #1EDD88;
 $gray: #0E0000;
 $light-gray: #F4F4F4;
 
-
-// define colors for our color scheme
-$grey-minimal: rgb(240, 240, 240); // 245
-$grey: rgb(220, 220, 220); // 220
+$grey-minimal: rgb(240, 240, 240);
+$grey: rgb(220, 220, 220);
 $red: rgb(255, 45, 2);
 $indigo: rgb(38, 80, 142);
 $indigo-dark: rgb(25, 45, 75);

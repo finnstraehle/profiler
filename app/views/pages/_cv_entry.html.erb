@@ -1,22 +1,22 @@
-<div class="cv-entry">
-  <div class="cv-entry-header">
+<div class="cv-entry">  <!-- create a container for the cv entries -->
+  <div class="cv-entry-header"> <!-- create a header for the cv entries -->
     <div>
-      <p><strong><%= entry.title %></strong></p>
-      <p><i><%= entry.subtitle %></i></p>
+      <p><strong><%= entry.title %></strong></p>  <!-- display the title, bold -->
+      <p><i><%= entry.subtitle %></i></p> <!-- display the subtitle, italic -->
     </div>
-    <div style="text-align: right">
-      <p><strong><%= entry.start.strftime('%m/%Y') %>–<%= entry.end.strftime('%m/%Y') %></strong></p>
-      <p><i><%= entry.location %></i></p>
+    <div style="text-align: right"> <!-- align the text to the right -->
+      <p><strong><%= entry.start.strftime('%m/%Y') %>–<%= entry.end.strftime('%m/%Y') %></strong></p> <!-- display the start and end date (formatted), bold -->
+      <p><i><%= entry.location %></i></p> <!-- display the location, italic -->
     </div>
   </div>
-  <li><%= entry.bullet_one %></li>
-  <li style="margin-bottom: 10px"><%= entry.bullet_two %></li>
-  <div class="cv-entry-buttons">
+  <li><%= entry.bullet_one %></li>  <!-- display the first bullet point -->
+  <li style="margin-bottom: 10px"><%= entry.bullet_two %></li>  <!-- display the second bullet point -->
+  <div class="cv-entry-buttons">  <!-- create a container for the buttons -->
     <div class="icon-btn">
-      <%= link_to "<i class='fa-solid fa-pen'></i>".html_safe, edit_resume_entry_path(entry) %>
+      <%= link_to "<i class='fa-solid fa-pen'></i>".html_safe, edit_resume_entry_path(entry) %> <!-- create a button to edit the cv entry -->
     </div>
     <div class="icon-btn">
-      <%= link_to "<i class='fa-regular fa-trash-alt'></i>".html_safe, resume_entry_path(entry), data: { turbo_method: :delete, turbo_confirm: "Are you sure that you want to delete this Entry?"} %>
+      <%= link_to "<i class='fa-regular fa-trash-alt'></i>".html_safe, resume_entry_path(entry), data: { turbo_method: :delete, turbo_confirm: "Are you sure that you want to delete this Entry?"} %> <!-- create a button to delete the cv entry, with a confirmation -->
     </div>
   </div>
 </div>

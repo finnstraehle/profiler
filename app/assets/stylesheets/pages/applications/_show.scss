@@ -1,15 +1,15 @@
 .sheet-application {
-  background: white;
-  width: 90%;
-  margin: 40px auto 0 auto;
-  padding: 100px 140px;
-  border-radius: 10px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  background: white;  // make the background white
+  width: 90%; // make the width 90% of the page
+  margin: 40px auto 0 auto; // add a little space above the sheet and center it horizontally  (auto = automatically)
+  padding: 100px 140px; // add a little padding to the sheet (100px top, 140px right, 100px bottom, 140px left)
+  border-radius: 10px;  // round the corners
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); // add a little box shadow
 }
 
 .sheet-application .sheet-application-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 100px;
+  display: flex;  // display the header as a flexbox  (this will make the elements in the header display side by side)
+  justify-content: space-between; // space out the elements in the header
+  align-items: center;  // center the elements vertically in the header
+  margin-bottom: 100px; // add a little space below the header
 }

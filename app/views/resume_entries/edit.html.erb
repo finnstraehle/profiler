@@ -1,21 +1,21 @@
-<div class="container-l">
+<div class="container-l"> <!-- create a container for the experience entries -->
   <div class="header-page">
     <h1>Edit Experience</h1>
   </div>
-  <%= render "shared/back_button" %>
-  <div class="sheet-application">
-    <%= simple_form_for(@resume_entry) do |f| %>
-      <%= f.input :section, collection: [1, 2, 3] %>
-      <%= f.input :title %>
-      <%= f.input :subtitle %>
-      <%= f.input :location %>
-      <%= f.input :bullet_one %>
-      <%= f.input :bullet_two %>
-      <%= f.input :start %>
-      <%= f.input :end %>
+  <%= render "shared/back_button" %>  <!-- render the back button -->
+  <div class="sheet-application"> <!-- create a sheet for the experience entries -->
+    <%= simple_form_for(@resume_entry) do |f| %>  <!-- create a form for the experience entries -->
+      <%= f.input :section, collection: [1, 2, 3] %>  <!-- create an input field for the section -->
+      <%= f.input :title %> <!-- create an input field for the title -->
+      <%= f.input :subtitle %>  <!-- create an input field for the subtitle -->
+      <%= f.input :location %>  <!-- create an input field for the location -->
+      <%= f.input :bullet_one %>  <!-- create an input field for the first bullet -->
+      <%= f.input :bullet_two %>  <!-- create an input field for the second bullet -->
+      <%= f.input :start %> <!-- create an input field for the start date -->
+      <%= f.input :end %> <!-- create an input field for the end date -->
       <div class="d-flex" style="margin-top: 50px">
-        <%= f.button :submit, class:"button", style:"margin: 0 auto" %>
+        <%= f.button :submit, class:"button", style:"margin: 0 auto" %>   <!-- create a submit button -->
       </div>
-    <% end %>
+    <% end %> <!-- end the form -->
   </div>
 </div>

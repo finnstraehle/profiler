@@ -3,32 +3,32 @@
 
 // Define fonts for body and headers
 $body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+$headers-font: "Nunito", "Helvetica", "sans-serif"; 
 
 // Define links style
 a {
-  text-decoration: none !important;
-  color: #3a3a3a !important;
+  text-decoration: none !important; // remove the default underline from links (important is used to override the default style) (the !important is needed because the default style is defined in a different file)
+  color: #3a3a3a !important; // make the links a shade of grey (important is used to override the default style) (the !important is needed because the default style is defined in a different file)
   p {
-    color: #3a3a3a;
+    color: #3a3a3a; // make the text a shade of grey
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6 { // make the headers a shade of grey
     color: #3a3a3a;
   }
 }
 
 a:hover {
-  text-decoration: none !important;
-  color: #3a3a3a;
+  text-decoration: none !important; // remove the default underline from links (important is used to override the default style) (the !important is needed because the default style is defined in a different file)
+  color: #3a3a3a; // make the links a shade of grey
   p {
-    color: #3a3a3a;
+    color: #3a3a3a; // make the text a shade of grey
   }
-  h1, h2, h3, h4, h5, h6 {
-    color: #3a3a3a;
+  h1, h2, h3, h4, h5, h6 {  // make the headers a shade of grey
+    color: #3a3a3a; // make the headers a shade of grey
   }
 }
 
 // Define icon style
 i {
-  color: #3a3a3a;
+  color: #3a3a3a; // make the icons a shade of grey
 }
