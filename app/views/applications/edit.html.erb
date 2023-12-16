@@ -1,19 +1,19 @@
-<div class="container-l">
+<div class="container-l"> <!-- create a container for the applications -->
   <div class="header-page">
     <h1>Edit Application</h1>
   </div>
   <%= render "shared/back_button" %>
   <div class="sheet-application">
-    <%= simple_form_for(@application) do |f| %>
-      <%= f.input :company %>
-      <%= f.input :link %>
-      <%= f.input :status, collection: Application::STATUS %>
-      <%= f.input :notes, :input_html => { :rows => 6 } %>
-      <%= f.input :resume_id, collection: @resumes %>
-      <%= f.input :cover_letter_id, collection: @cover_letters %>
+    <%= simple_form_for(@application) do |f| %> <!-- create a form for the application -->
+      <%= f.input :company %> <!-- create an input field for the company name -->
+      <%= f.input :link %>  <!-- create an input field for the link -->
+      <%= f.input :status, collection: Application::STATUS %> <!-- create an input field for the status -->
+      <%= f.input :notes, :input_html => { :rows => 6 } %>  <!-- create an input field for the notes, with 6 lines of space -->
+      <%= f.input :resume_id, collection: @resumes %> <!-- create an input field for the resume -->
+      <%= f.input :cover_letter_id, collection: @cover_letters %> <!-- create an input field for the cover letter -->
       <div class="d-flex" style="margin-top: 50px">
-        <%= f.button :submit, class:"button", style:"margin: 0 auto" %>
+        <%= f.button :submit, class:"button", style:"margin: 0 auto" %> <!-- create a submit button -->
       </div>
-    <% end %>
+    <% end %> <!-- end the form -->
   </div>
 </div>

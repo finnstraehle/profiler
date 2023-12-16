@@ -1,15 +1,15 @@
-<div class="container-l">
+<div class="container-l"> <!-- create a container for the applications -->  
   <div class="header-page">
     <h1>My Applications</h1>
     <div class="icon-btn">
-      <%= link_to "<i class='fa-solid fa-plus'></i>".html_safe, new_application_path %>
+      <%= link_to "<i class='fa-solid fa-plus'></i>".html_safe, new_application_path %> <!-- create a button to create a new application -->
     </div>
   </div>
-  <div style="text-align: right">
-    <% sort = ['Company', 'Status', 'Date'] %>
-    <p>Sort – <%= sort[1] %></p>
+  <div style="text-align: right"> <!-- create a dropdown menu to sort the applications -->
+    <% sort = ['Company', 'Status', 'Date'] %>  <!-- create an array with the options -->
+    <p>Sort – <%= sort[1] %></p>  <!-- display the current sort option -->
   </div>
-  <% @applications.sort_by{|e| e.status}.each do |application| %>
-    <%= render "applications/card_application", application: application %>
-  <% end %>
+  <% @applications.sort_by{|e| e.status}.each do |application| %> <!-- sort the applications by status and display them -->
+    <%= render "applications/card_application", application: application %> <!-- render the card for each application -->
+  <% end %> <!-- end the loop -->
 </div>

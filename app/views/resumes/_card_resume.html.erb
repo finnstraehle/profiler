@@ -1,13 +1,13 @@
-<div class="card-saved">
+<div class="card-saved">  <!-- create a card for each resume -->
   <div class="card-saved-content">
-    <h4><%= resume.name %></h4>
-    <div class="d-flex">
-      <p><%= resume.company %></p>
-      <p>&nbsp– <%= resume.created_at.strftime('%d/%m/%Y') %></p>
+    <h4><%= resume.name %></h4> <!-- display the resume name -->
+    <div class="d-flex">  <!-- create a flexbox for the company name and date with bootstrap -->
+      <p><%= resume.company %></p>  <!-- display the company name -->
+      <p>&nbsp– <%= resume.created_at.strftime('%d/%m/%Y') %></p>  <!-- display the date and format the date, &nbsp is a space -->
     </div>
   </div>
-  <div class="card-saved-buttons">
-    <%= link_to "<i class='fa-solid fa-download'></i>".html_safe, resume_path(resume, format: :pdf), class: "mx-3" %>
-    <%= link_to "<i class='fa-regular fa-trash-alt'></i>".html_safe, resume_path(resume), data: { turbo_method: :delete, turbo_confirm: "Are you sure that you want to delete this Resume?"} %>
+  <div class="card-saved-buttons">  <!-- these get visibile when hovering (see in CSS) -->
+    <%= link_to "<i class='fa-solid fa-download'></i>".html_safe, resume_path(resume, format: :pdf), class: "mx-3" %> <!-- create a download button for each resume -->
+    <%= link_to "<i class='fa-regular fa-trash-alt'></i>".html_safe, resume_path(resume), data: { turbo_method: :delete, turbo_confirm: "Are you sure that you want to delete this Resume?"} %> <!-- create a delete button for each resume, with a confirmation -->
   </div>
 </div>

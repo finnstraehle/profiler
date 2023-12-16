@@ -1,12 +1,12 @@
-<div class="cl_entry">
-  <p><%= entry.text %></p>
-  <p></p>
-  <div class="cl-entry-buttons">
-    <div class="icon-btn">
-      <%= link_to "<i class='fa-solid fa-pen'></i>".html_safe, edit_cover_letter_entry_path(entry) %>
+<div class="cl_entry">  <!-- create a container for the cover letter entries -->
+  <p><%= entry.text %></p>  <!-- display the text -->
+  <p></p> <!-- create a space -->
+  <div class="cl-entry-buttons">  <!-- create a container for the buttons -->
+    <div class="icon-btn">  <!-- create a button to edit the cover letter entry -->
+      <%= link_to "<i class='fa-solid fa-pen'></i>".html_safe, edit_cover_letter_entry_path(entry) %> <!-- create a button to edit the cover letter entry -->
     </div>
-    <div class="icon-btn">
-      <%= link_to "<i class='fa-regular fa-trash-alt'></i>".html_safe, cover_letter_entry_path(entry), data: { turbo_method: :delete, turbo_confirm: "Are you sure that you want to delete this Entry?"} %>
+    <div class="icon-btn">  <!-- create a button to delete the cover letter entry -->
+      <%= link_to "<i class='fa-regular fa-trash-alt'></i>".html_safe, cover_letter_entry_path(entry), data: { turbo_method: :delete, turbo_confirm: "Are you sure that you want to delete this Entry?"} %> <!-- create a button to delete the cover letter entry, with a confirmation -->
     </div>
   </div>
 </div>

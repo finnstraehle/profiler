@@ -1,46 +1,46 @@
-<div class="container-l">
+<div class="container-l"> <!-- create a container for the applications -->
   <div class="header-page">
-    <h1>Application – <%= @application.company %></h1>
+    <h1>Application – <%= @application.company %></h1>  <!-- display the company name -->
     <div class="icon-btn">
-      <%= link_to "<i class='fa-solid fa-pen'></i>".html_safe, edit_application_path(@application) %>
+      <%= link_to "<i class='fa-solid fa-pen'></i>".html_safe, edit_application_path(@application) %> <!-- create a button to edit the application -->
     </div>
   </div>
-  <%= link_to "<i class='fa-solid fa-arrow-left'></i>".html_safe + " " + "Back", applications_path %>
-  <div class="sheet-application">
-    <div class="sheet-application-header">
+  <%= link_to "<i class='fa-solid fa-arrow-left'></i>".html_safe + " " + "Back", applications_path %> <!-- create a button to go back to the applications index -->
+  <div class="sheet-application"> <!-- create a sheet for the application -->
+    <div class="sheet-application-header">  <!-- create a header for the application -->
       <div>
-        <h4><%= @application.company %></h4>
-        <p><%= @application.link %></p>
+        <h4><%= @application.company %></h4>  <!-- display the company name -->
+        <p><%= @application.link %></p> <!-- display the link -->
       </div>
       <div>
-        <h4 style="color: <%= @status_color %>"><%= @application.status %></h4>
-        <p>since <%= @date.mjd - @application.date.mjd != 0 ? @date.mjd - @application.date.mjd : "" %> <%= @date.mjd - @application.date.mjd == 1 ? "day" : @date.mjd - @application.date.mjd == 0 ? "today" : "days" %></p>
+        <h4 style="color: <%= @status_color %>"><%= @application.status %></h4> <!-- display the status with the status color -->
+        <p>since <%= @date.mjd - @application.date.mjd != 0 ? @date.mjd - @application.date.mjd : "" %> <%= @date.mjd - @application.date.mjd == 1 ? "day" : @date.mjd - @application.date.mjd == 0 ? "today" : "days" %></p> <!-- display the date, deciding if "days"/"day" or "today" -->
       </div>
     </div>
     <h4>Notes:</h4>
-    <p><%= @application.notes %></p>
-    <div class="spacer"></div>
-    <div class="sheet-application-header">
+    <p><%= @application.notes %></p>  <!-- display the notes -->
+    <div class="spacer"></div>  <!-- create a spacer, to have a gap horizontally -->
+    <div class="sheet-application-header">  <!-- create a header for the application -->
       <div>
         <h4>Resume:</h4>
-        <div style="display: flex; justify-content: center; align-items: center; width: 300px; height: 50px; border: 2px solid grey; border-radius: 10px">
-          <% if @resume.nil? %><i>– no file –</i><% end %>
-          <% unless @resume.nil? %>
-            <%= link_to resume_path(@resume, format: :pdf) do %>
-              <%= @resume.name %> – <%= @resume.company %>
-            <% end %>
-          <% end %>
+        <div style="display: flex; justify-content: center; align-items: center; width: 300px; height: 50px; border: 2px solid grey; border-radius: 10px">  <!-- create a box for the resume, with in-line css -->
+          <% if @resume.nil? %><i>– no file –</i><% end %>  <!-- if there is no resume, display "no file" -->
+          <% unless @resume.nil? %> <!-- if there is a resume, display the name and company -->
+            <%= link_to resume_path(@resume, format: :pdf) do %>  <!-- make this element clickable and link to the resume -->
+              <%= @resume.name %> – <%= @resume.company %>  <!-- display the name and company -->
+            <% end %> <!-- end the link -->
+          <% end %> <!-- end the unless -->
         </div>
       </div>
       <div>
         <h4>Cover Letter:</h4>
-        <div style="display: flex; justify-content: center; align-items: center; width: 300px; height: 50px; border: 2px solid grey; border-radius: 10px">
-          <% if @cover_letter.nil? %><i>– no file –</i><% end %>
-          <% unless @cover_letter.nil? %>
-            <%= link_to cover_letter_path(@cover_letter, format: :pdf) do %>
-              <%= @cover_letter.name %> – <%= @cover_letter.company %>
-            <% end %>
-          <% end %>
+        <div style="display: flex; justify-content: center; align-items: center; width: 300px; height: 50px; border: 2px solid grey; border-radius: 10px">  <!-- create a box for the cover letter, with in-line css -->
+          <% if @cover_letter.nil? %><i>– no file –</i><% end %>  <!-- if there is no cover letter, display "no file" -->
+          <% unless @cover_letter.nil? %> <!-- if there is a cover letter, display the name and company -->
+            <%= link_to cover_letter_path(@cover_letter, format: :pdf) do %>  <!-- make this element clickable and link to the cover letter -->
+              <%= @cover_letter.name %> – <%= @cover_letter.company %>  <!-- display the name and company -->
+            <% end %> <!-- end the link -->
+          <% end %> <!-- end the unless -->
         </div>
       </div>
   </div>

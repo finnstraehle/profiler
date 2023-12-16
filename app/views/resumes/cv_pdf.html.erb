@@ -1,59 +1,60 @@
-<div style="padding: 30px 50px; font-size: larger">
-  <div style="text-align: center">
-    <h2 style="margin: 0"><%= @user.full_name %></h2>
-    <p style="margin: 0"><%= @user.address %> | <%= @user.email %> | <%= @user.phone %></p>
+<!-- have to use in-line CSS because of PDF, CSS file don't work -->
+<div style="padding: 30px 50px; font-size: larger"> <!-- create a container for the cover letter pdf -->
+  <div style="text-align: center">  <!-- create a header for the cover letter pdf -->
+    <h2 style="margin: 0"><%= @user.full_name %></h2> <!-- display the user's full name -->
+    <p style="margin: 0"><%= @user.address %> | <%= @user.email %> | <%= @user.phone %></p> <!-- display the user's address, email and phone number -->
     <br>
   </div>
-  <h4 style="font-size: 26px; margin: 0">Education</h4>
+  <h4 style="font-size: 26px; margin: 0">Education</h4> <!-- create a header for the cover letter pdf -->
   <hr style="margin: 5px 0">
-  <div class="cv-entries">
-    <% @entries_s1.each do |entry| %>
-    <div style="display: -webkit-box; -webkit-box-pack: justify;">
+  <div class="cv-entries">  <!-- create a container for the cover letter pdf -->
+    <% @entries_s1.each do |entry| %> <!-- loop through the cover letter entries -->
+    <div style="display: -webkit-box; -webkit-box-pack: justify;">  <!-- create a container for the cover letter pdf with gem-->
       <div>
-        <p style="margin: 0"><strong><%= entry.title %></strong></p>
-        <p style="margin: 0"><i><%= entry.subtitle %></i></p>
+        <p style="margin: 0"><strong><%= entry.title %></strong></p>  <!-- display the title -->
+        <p style="margin: 0"><i><%= entry.subtitle %></i></p> <!-- display the subtitle -->
       </div>
       <div style="text-align: right">
-        <p style="margin: 0"><strong><%= entry.start.strftime('%m/%Y') %>-<%= entry.end.strftime('%m/%Y') %></strong></p>
-        <p style="margin: 0"><i><%= entry.location %></i></p>
+        <p style="margin: 0"><strong><%= entry.start.strftime('%m/%Y') %>-<%= entry.end.strftime('%m/%Y') %></strong></p> <!-- display the start and end date (formatted), bold -->
+        <p style="margin: 0"><i><%= entry.location %></i></p> <!-- display the location, italic -->
       </div>
     </div>
-    <li><%= entry.bullet_one %></li>
-    <li style="margin-bottom: 15px"><%= entry.bullet_two %></li>
-    <% end %>
+    <li><%= entry.bullet_one %></li>  <!-- display the bullets -->
+    <li style="margin-bottom: 15px"><%= entry.bullet_two %></li>  <!-- display the bullets -->
+    <% end %> <!-- end the loop -->
   </div>
   <h4 style="font-size: 26px; margin: 0">Work Experience</h4>
   <hr style="margin: 5px 0">
   <div class="cv-entries">
-    <% @entries_s2.each do |entry| %>
-    <div style="display: -webkit-box; -webkit-box-pack: justify;">
+    <% @entries_s2.each do |entry| %> <!-- loop through the cover letter entries -->
+    <div style="display: -webkit-box; -webkit-box-pack: justify;">  <!-- create a container for the cover letter pdf with gem-->
       <div>
-        <p style="margin: 0"><strong><%= entry.title %></strong></p>
-        <p style="margin: 0"><i><%= entry.subtitle %></i></p>
+        <p style="margin: 0"><strong><%= entry.title %></strong></p>  <!-- display the title -->
+        <p style="margin: 0"><i><%= entry.subtitle %></i></p> <!-- display the subtitle -->
       </div>
       <div style="text-align: right">
-        <p style="margin: 0"><strong><%= entry.start.strftime('%m/%Y') %>-<%= entry.end.strftime('%m/%Y') %></strong></p>
-        <p style="margin: 0"><i><%= entry.location %></i></p>
+        <p style="margin: 0"><strong><%= entry.start.strftime('%m/%Y') %>-<%= entry.end.strftime('%m/%Y') %></strong></p> <!-- display the start and end date (formatted), bold -->
+        <p style="margin: 0"><i><%= entry.location %></i></p> <!-- display the location, italic -->
       </div>
     </div>
-    <li><%= entry.bullet_one %></li>
-    <li style="margin-bottom: 15px"><%= entry.bullet_two %></li>
-    <% end %>
+    <li><%= entry.bullet_one %></li>  <!-- display the bullets -->
+    <li style="margin-bottom: 15px"><%= entry.bullet_two %></li>  <!-- display the bullets -->
+    <% end %> <!-- end the loop -->
   </div>
-  <h4 style="font-size: 26px; margin: 0">Skills & Interests</h4>
+  <h4 style="font-size: 26px; margin: 0">Skills & Interests</h4>  <!-- create a header for the cover letter pdf -->
   <hr style="margin: 5px 0">
-  <% @entries_s3.each do |entry| %>
-    <div style="display: -webkit-box; -webkit-box-pack: justify;">
+  <% @entries_s3.each do |entry| %> <!-- loop through the cover letter entries -->
+    <div style="display: -webkit-box; -webkit-box-pack: justify;">  <!-- create a container for the cover letter pdf with gem-->
       <div>
-        <p style="margin: 0"><strong><%= entry.title %></strong></p>
-        <p style="margin: 0"><i><%= entry.subtitle %></i></p>
+        <p style="margin: 0"><strong><%= entry.title %></strong></p>  <!-- display the title -->
+        <p style="margin: 0"><i><%= entry.subtitle %></i></p> <!-- display the subtitle -->
       </div>
       <div style="text-align: right">
-        <p style="margin: 0"><strong><%= entry.start.strftime('%m/%Y') %>-<%= entry.end.strftime('%m/%Y') %></strong></p>
-        <p style="margin: 0"><i><%= entry.location %></i></p>
+        <p style="margin: 0"><strong><%= entry.start.strftime('%m/%Y') %>-<%= entry.end.strftime('%m/%Y') %></strong></p> <!-- display the start and end date (formatted), bold -->
+        <p style="margin: 0"><i><%= entry.location %></i></p> <!-- display the location, italic -->
       </div>
     </div>
-    <li><%= entry.bullet_one %></li>
-    <li style="margin-bottom: 15px"><%= entry.bullet_two %></li>
-  <% end %>
+    <li><%= entry.bullet_one %></li>  <!-- display the bullets -->
+    <li style="margin-bottom: 15px"><%= entry.bullet_two %></li>  <!-- display the bullets -->
+  <% end %> <!-- end the loop -->
 </div>

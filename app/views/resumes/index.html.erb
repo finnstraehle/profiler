@@ -1,10 +1,10 @@
-<div class="container-l">
+<div class="container-l"> <!-- create a container for the resumes -->
   <div class="header-page">
     <h1>Saved Resumes</h1>
   </div>
-  <%= link_to "<i class='fa-solid fa-arrow-left'></i>".html_safe + " " + "Back", cv_path %>
-  <div class="spacer"></div>
-  <% @resumes.each do |resume| %>
-    <%= render "resumes/card_resume", resume: resume %>
-  <% end %>
+  <%= link_to "<i class='fa-solid fa-arrow-left'></i>".html_safe + " " + "Back", cv_path %> <!-- create a button to go back to the resumes index -->
+  <div class="spacer"></div>  <!-- create a spacer, to have a gap horizontally -->
+  <% @resumes.each do |resume| %> <!-- loop through the resumes -->
+    <%= render "resumes/card_resume", resume: resume %> <!-- render the card for each resume -->
+  <% end %> <!-- end the loop -->
 </div>

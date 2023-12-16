@@ -1,47 +1,47 @@
-<div class="container-l">
+<div class="container-l"> <!-- create a container for the resume entries -->
   <div class="header-page">
     <h1>My Resume</h1>
-    <div class="d-flex">
+    <div class="d-flex">  <!-- create a flexbox for the buttons -->
       <div class="icon-btn">
-        <%= link_to "<i class='fa-solid fa-plus'></i>".html_safe, new_resume_entry_path(@resume_entry) %>
+        <%= link_to "<i class='fa-solid fa-plus'></i>".html_safe, new_resume_entry_path(@resume_entry) %> <!-- create a button to create a new resume entry -->
       </div>
       <div class="icon-btn">
-        <%= link_to "<i class='fa-solid fa-download'></i>".html_safe, resume_path(@resume, format: :pdf)  %>
+        <%= link_to "<i class='fa-solid fa-download'></i>".html_safe, resume_path(@resume, format: :pdf)  %>  <!-- create a button to download the resume -->
       </div>
       <div class="icon-btn">
-        <%= link_to "<i class='fa-solid fa-floppy-disk'></i>".html_safe, new_resume_path %>
+        <%= link_to "<i class='fa-solid fa-floppy-disk'></i>".html_safe, new_resume_path %> <!-- create a button to save the current resume -->
       </div>
       <div class="icon-btn">
-        <%= link_to "<i class='fa-regular fa-bookmark'></i>".html_safe, resumes_path %>
+        <%= link_to "<i class='fa-regular fa-bookmark'></i>".html_safe, resumes_path %> <!-- create a button to go to all saved resumes -->
       </div>
     </div>
   </div>
   <div class="sheet-doc">
     <div class="doc-header">
-      <h2><%= @user.full_name %></h2>
-      <p><%= @user.address %> | <%= @user.email %> | <%= @user.phone %></p>
+      <h2><%= @user.full_name %></h2> <!-- display the user's full name -->
+      <p><%= @user.address %> | <%= @user.email %> | <%= @user.phone %></p> <!-- display the user's address, email and phone -->
       <br>
     </div>
     <h4>Education</h4>
     <hr>
     <div class="cv-entries">
-      <% @entries_s1.each do |entry| %>
-        <%= render "pages/cv_entry", entry: entry %>
-      <% end %>
+      <% @entries_s1.each do |entry| %> <!-- display the resume entries -->
+        <%= render "pages/cv_entry", entry: entry %>  <!-- render the resume entry -->
+      <% end %> <!-- end the loop -->
     </div>
     <h4>Work Experience</h4>
     <hr>
     <div class="cv-entries">
-      <% @entries_s2.each do |entry| %>
-        <%= render "pages/cv_entry", entry: entry %>
-      <% end %>
+      <% @entries_s2.each do |entry| %> <!-- display the resume entries -->
+        <%= render "pages/cv_entry", entry: entry %>  <!-- render the resume entry -->
+      <% end %> <!-- end the loop -->
     </div>
     <h4>Skills & Interests</h4>
     <hr>
     <div class="cv-entries">
-      <% @entries_s3.each do |entry| %>
-        <%= render "pages/cv_entry", entry: entry %>
-      <% end %>
+      <% @entries_s3.each do |entry| %> <!-- display the resume entries -->
+        <%= render "pages/cv_entry", entry: entry %>  <!-- render the resume entry -->
+      <% end %> <!-- end the loop -->
     </div>
   </div>
 </div>

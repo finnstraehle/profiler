@@ -1,36 +1,36 @@
-<div class="container-l">
+<div class="container-l"> <!-- create a container for the cover letter -->
   <div class="header-page">
     <h1>My Cover Letter</h1>
-    <div class="d-flex">
+    <div class="d-flex">  <!-- create a flexbox -->
       <div class="icon-btn">
-        <%= link_to "<i class='fa-solid fa-plus'></i>".html_safe, new_cover_letter_entry_path(@cover_letter_entry) %>
+        <%= link_to "<i class='fa-solid fa-plus'></i>".html_safe, new_cover_letter_entry_path(@cover_letter_entry) %> <!-- create a button to create a new cover letter entry -->
       </div>
       <div class="icon-btn">
-        <%= link_to "<i class='fa-solid fa-download'></i>".html_safe, cover_letter_path(@cover_letter, format: :pdf) %>
+        <%= link_to "<i class='fa-solid fa-download'></i>".html_safe, cover_letter_path(@cover_letter, format: :pdf) %> <!-- create a button to download the cover letter -->
       </div>
       <div class="icon-btn">
-        <%= link_to "<i class='fa-solid fa-floppy-disk'></i>".html_safe, new_cover_letter_path %>
+        <%= link_to "<i class='fa-solid fa-floppy-disk'></i>".html_safe, new_cover_letter_path %> <!-- create a button to save the current cover letter -->
       </div>
       <div class="icon-btn">
-        <%= link_to "<i class='fa-regular fa-bookmark'></i>".html_safe, cover_letters_path %>
+        <%= link_to "<i class='fa-regular fa-bookmark'></i>".html_safe, cover_letters_path %> <!-- create a button to go to all saved cover letters -->
       </div>
     </div>
   </div>
   <div class="sheet-doc">
     <div class="doc-header">
-      <h2><%= @user.full_name %></h2>
-      <p><%= @user.address %> | <%= @user.email %> | <%= @user.phone %></p>
+      <h2><%= @user.full_name %></h2> <!-- display the user's full name -->
+      <p><%= @user.address %> | <%= @user.email %> | <%= @user.phone %></p> <!-- display the user's address, email and phone -->
       <br>
     </div>
     <p>Dear Hiring Manager,</p>
     <br>
     <div class="cl-entries">
-      <% @cover_letter.cover_letter_entries.sort_by { |e| e.created_at }.each do |entry| %>
-        <%= render "pages/cl_entry", entry: entry %>
-      <% end %>
+      <% @cover_letter.cover_letter_entries.sort_by { |e| e.created_at }.each do |entry| %> <!-- sort the cover letter entries by date and display them -->
+        <%= render "pages/cl_entry", entry: entry %>  <!-- render the cover letter entry -->
+      <% end %> <!-- end the loop -->
     </div>
     <br>
     <p>Sincerly,</p>
-    <p><%= @user.full_name %></p>
+    <p><%= @user.full_name %></p> <!-- display the user's full name -->
   </div>
 </div>
