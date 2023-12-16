@@ -35,6 +35,6 @@ class ResumeEntriesController < ApplicationController
   private
 
   def resume_entry_params
-    params.require(:resume_entry).permit(:section, :title, :subtitle, :location, :start_date, :end_date, :is_active)
+    params.require(:resume_entry).permit(:section, :title, :subtitle, :location, :bullet_one, :bullet_two, :start, :end)
   end
 end

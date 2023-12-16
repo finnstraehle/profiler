@@ -47,9 +47,6 @@ puts "Creating users..."
     is_saved: false, # setting is_saved to false
     name: Faker::Job.title, # generating a random name for the resume
     company: Faker::Company.name, # generating a random company
-    section_one: "Education", # setting section one to Education
-    section_two: "Work Experience", # setting section two to Experience
-    section_three: "Skills & Interests", # setting section three to Skills
     user: user # assigning the user to the resume
   )
   resume.save! # saving the resume
@@ -58,10 +55,11 @@ puts "Creating users..."
       title: Faker::Company.name, # generating a random title
       subtitle: Faker::Job.title, # generating a random subtitle
       location: Faker::Address.city, # generating a random location
-      start: Faker::Date.between(from: 20.days.ago, to: Date.today), # generating a random start date
-      end: Faker::Date.between(from: 20.days.ago, to: Date.today), # generating a random end date
+      start: Faker::Date.between(from: 20.months.ago, to: 10.months.ago), # generating a random start date
+      end: Faker::Date.between(from: 10.months.ago, to: Date.today), # generating a random end date
       section: rand(1..3), # generating a random section
-      is_active: true, # setting is_active to true
+      bullet_one: Faker::Quote.matz.truncate(90), # generating a random bullet point
+      bullet_two: Faker::Quote.matz.truncate(90), # generating a random bullet point
       resume: resume # assigning the resume to the resume entry
     )
     resume_entry.save! # saving the resume entry
