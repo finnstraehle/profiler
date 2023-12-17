@@ -17,7 +17,7 @@ Overall, Profiler serves as a comprehensive example of web development using Rub
 
 <h1>– How to Use –</h1>
 
-Our Application is hosted on Heroku, so you can access it via a public domain.
+Our application is hosted on Heroku, so you can access it via a public domain.
 
 This application has a seed file, which populates the database for you. So please log-in with one of the pre-built accounts and don't create a new one:
 
