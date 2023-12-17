@@ -49,9 +49,9 @@ Password is always: 111111
 
 We want to share an overview of our team's workflow and learning experience for the Profiler project.
 
-We utilized a single GitHub account for our project, with each team member working on individual branches named after themselves. This approach allowed us to independently focus on different aspects of the project while maintaining a cohesive development process. Regular commits, pulls, and merges were integral to our workflow, ensuring everyone's contributions were synchronized.
+We utilized a single GitHub account for our project, but with each team member working on individual branches named after themselves to stay organized. This approach allowed us to focus on different aspects of the project while maintaining a cohesive development process, despite being limited by everyone working on one GitHub account. But since not all of us had experience using GitHub, this was the best approach for us.
 
-In terms of development, our focus was on Ruby, HTML, and CSS, adhering to Object-Oriented Programming principles. Each of us started by developing a specific page (Resume, Cover Letter, Applications, Home Page), with Finn taking the lead in the initial setup and the final stage.
+In terms of development, our focus was on Ruby, HTML, and CSS, adhering to Object-Oriented Programming principles. Each of us started by developing a specific page on their own (Resume, Cover Letter, Applications, Home Page), with Finn taking the lead in the initial rails setup and the final stage.
 
 The project was particularly enlightening due to the varied levels of experience within our team. Members with more coding experience shared their knowledge, helping those newer to these languages grasp more complex concepts and apply them practically, such as controllers, models and the MVC-architecture.
 
