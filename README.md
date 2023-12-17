@@ -17,19 +17,27 @@ Overall, Profiler serves as a comprehensive example of web development using Rub
 
 <h1>– How to Use –</h1>
 
-This application has a seed file, which populates the database for you. So please log-in with one of the pre-built accounts:
+Our Application is hosted on Heroku, so you can access it via a public domain.
 
-1. Download as ZIP-File, by clicking on the green button, saying "code", at the top of this page
-2. In your Terminal, navigate to the folder "profiler-master"
-3. type "rails serve" in your terminal
-4. open the local link
-5. login with: a@profilertest.com, password: 111111 (or b@.. c@.. d@.. etc., same password)
+This application has a seed file, which populates the database for you. So please log-in with one of the pre-built accounts and don't create a new one:
 
-when running in to issues, run the following commands in your terminal:
-1. rails db:drop
-2. rails db:create
-3. rails db:migrate
-4. rails db:seed
+1. Vitit: https://ancient-meadow-29014-b8962b773722.herokuapp.com
+2. Check out our home and about page
+3. Navigate to any other page, by using the navbar
+4. log in as one of the following accounts:
+
+- a@profilertest.com
+- b@profilertest.com
+- c@profilertest.com
+- d@profilertest.com
+- e@profilertest.com
+
+Password is always: 111111
+
+5. Test the rest of our application
+
+
+-> You can also download our code as ZIP-File, by clicking on the green button, saying "code", at the top of this page.
 
 
 <h1>– Database Schema Visualisation –</h1>
